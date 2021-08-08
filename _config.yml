@@ -1,5 +1,5 @@
 # Site settings
-title: Hux Blog
+title: The Road Less Traveled
 SEOTitle: The Road Less Traveled | The Road Less Traveled
 header-img: img/home-bg.jpg
 email: xiaohanyang0120@gmail.com
@@ -13,7 +13,7 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     MINO_向日葵
+weibo_username:     MINO_
 zhihu_username:     Nervermind
 github_username:    Xiaohan Yang
 twitter_username:   Xiaohan Yang
