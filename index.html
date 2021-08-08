@@ -1,0 +1,142 @@
+---
+layout: home
+main-title: "The Road No one taken"
+subtitle: "Loving books, music and movies"
+description: "Lu Lab at Institute of Genetics and Developmental Biology, Chinese Academy of Sciences"
+# images:
+# - image_path: /img/home/home01.jpg
+# - image_path: /img/home/home02.jpg
+# - image_path: /img/home/home03.jpg
+# - image_path: /img/home/home04.jpg
+# - image_path: /img/home/home05.jpg
+# - image_path: /img/home/home06.jpg
+# - image_path: /img/home/home07.jpg
+ 
+---
+
+
+<html class="no-js" lang="en">
+<head>
+  <meta content="charset=utf-8 ">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+
+
+<!-- CSS -->
+
+     
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" type="text/css" media="screen" />
+     <link rel="stylesheet" href="{{ site.baseurl }}/css/galleries.css" media="screen" />
+      <link rel="stylesheet" href="{{ site.baseurl }}/css/WYSIWYG.css" media="screen" />
+
+
+
+	<!-- Modernizr -->
+
+  <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+
+  
+
+</head>
+
+<body class="fullscreen">
+
+<!-- MAIN CONTENT SECTION  _____________________________________________-->
+	<section id="content" role="main">
+		<div class="wrapper">
+
+    <!-- WYSIWYG -->
+
+    <div class="position-absolute">
+      
+        <h2 class="big no-margin"><strong>{{ page.main-title }}</strong></h2>
+        <br>
+        <h2 class="slightbig no-margin"><strong>{{ page.subtitle }}</strong></h2> 
+        <br>
+                     <div class="entry-summary">
+							<h3><em>{{ page.description }}</em></h3>
+						</div><br />
+		</div>
+			
+			<div class="gallery fullscreen-gallery kenburns-gallery">
+
+				<canvas id="kenburns"></canvas>
+				
+{% for image in page.images %}  	
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.gallery-folder }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+	
+				</header>	
+				</figure>
+
+{% endfor %}
+
+				</div>
+			<!-- END WYSIWYG -->
+			
+	
+		</div><!-- END .wrapper -->
+		
+	</section>
+
+<div id="footer" role="contentinfo">
+		<ul class="soc-icons">
+
+                
+ {% if site.twitter_username %}
+			<li>
+   <a href="https://twitter.com/yxh02946796" style="
+color:#dddddd; target="_blank" title="Twitter">
+                       <i class="fa fa-twitter"></i>
+                     </span>
+</a></li>
+    {% endif %}
+                                
+                    {% if site.github_username %}
+                <li>
+   <a href="https://github.com/Yangxiaohan0120" style="
+color:#dddddd; target="_blank" title="Github">
+              <i class="fa fa-github"></i>
+                     </span>
+                   {% endif %}
+<li>
+    <a href="mailto:xhyang@genetics.ac.cn" style="
+color:#dddddd; target="_blank" title="Email">
+              <i class="fa fa-envelope-o"></i></span>
+          </a> </li>
+	
+					
+		</ul>	
+	</div>
+
+  
+<!-- jQuery -->
+
+
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script> 
+
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include gallery cycle plugin -->
+<script src="{{ site.baseurl }}/js/jquery.cycle.min.js"></script>
+<!-- include kenburns plugins -->
+<script src="{{ site.baseurl }}/js/kenburns.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+
+
+       </body>
+    </html>
+
