@@ -79,7 +79,7 @@ ga_domain: huangxuan.me
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "杨晓寒."
-sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/Portrait.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -101,33 +101,33 @@ page-mathjax: false
 
 
 # Friends
-friends: [
+# friends: [
     {
     #     title: "Su",
     #     href: "http://su.gallery/"
     # },{
-        title: "乱序（Midare）",
-        href: "http://mida.re/"
-    },{
-        title: "Sherry Woo",
-        href: "https://sherrywoo.me/"
-    },{
-        title: "Kun Qian",
-        href: "http://kunq.me"
-    },{
-        title: "Ebn Zhang",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "JiyinYiyong",
-        href: "http://tiye.me/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
-    }
-]
+#         title: "乱序（Midare）",
+#         href: "http://mida.re/"
+#     },{
+#         title: "Sherry Woo",
+#         href: "https://sherrywoo.me/"
+#     },{
+#         title: "Kun Qian",
+#         href: "http://kunq.me"
+#     },{
+#         title: "Ebn Zhang",
+#         href: "http://ebnbin.com/"
+#     },{
+#         title: "SmdCn",
+#         href: "http://blog.smdcn.net"
+#     },{
+#         title: "JiyinYiyong",
+#         href: "http://tiye.me/"
+#     },{
+#         title: "DHong Say",
+#         href: "http://dhong.co"
+#     },{
+#         title: "尹峰以为",
+#         href: "http://ingf.github.io/"
+#     }
+# ]
