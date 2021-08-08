@@ -1,1 +1,16 @@
 theme: jekyll-theme-cayman
+
+# Site settings
+title: The Road No one taken
+email: "xiaohanyang0120@gmail.com"
+description: "Personal website of Xiaohan Yang."
+url: "https://Yangxiaohan0120.github.io"
+baseurl: "/home"
+facebook_username: ""
+twitter_username: "yxh02946796"
+instagram_username: ""
+github_username:  "Yangxiaohan0120"
+deviantart_username: ""
+flickr_username: ""
+discus_shortname: ""
+share: true
