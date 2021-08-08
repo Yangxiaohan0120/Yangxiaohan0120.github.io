@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-us" class="no-js">
+<html lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    {% if page.url != '/index.html' %}
-      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-      {% include sidebar-nav.html %}
-      {% include menu.html %}
-    {% endif %}
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    {% include nav.html %}
+    {% include search.html %}
 
     {{ content }}
 
-    {% if page.url != '/index.html' %}
-      {% include sidebar-toggle.html %}
-    {% endif %}
+    {% include footer.html %}
 
-    {% if page.url == '/index.html' %}
-      {% include subscribe.html %}
-      {% include footer.html %}
-    {% endif %}
 
-    {% include footer-scripts.html %}
-  </body>
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
 </html>
