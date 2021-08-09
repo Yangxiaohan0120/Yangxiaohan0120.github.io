@@ -26,15 +26,13 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
 				{% capture tags %}
 				{% for tag in site.tags %}
-                    {% for post in site.categories.Life %}
-                        <a data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
-                            data-encode="{{ tag[0] | strip | url_encode }}"
-                            class="tag-button"
-                            title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                            {{ tag[0] }}
-                            <sup>{{tag[1].size}}</sup>
-                        </a>__SEPERATOR__
-                    {% endfor %} 
+                    <a data-sort="{{ site.categories.Life.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
+                        data-encode="{{ tag[0] | strip | url_encode }}"
+                        class="tag-button"
+                        title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                        {{ tag[0] }}
+                        <sup>{{tag[1].size}}</sup>
+                    </a>__SEPERATOR__
 				{% endfor %}
 				{% endcapture %}
         {{ tags | split:'__SEPERATOR__' | sort }}
@@ -42,7 +40,14 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
             <!-- Article List -->
 			<div class="mini-post-list js-result d-none">
-                {%- assign _sorted_list = site.categories.Life -%}
+                {%- assign _sorted_list = '' -%}
+                {% for _post in site.categories.Life %}
+                    {%- assign _post_encode = _post | strip | url_encode -%}
+                    {%- if forloop.last -%}
+                        {%- assign _post = _post | append: _post_encode -%}
+                    {%- else -%}
+                        {%- assign _post = _post | append: _post_encode | append: ',' -%}
+                    {%- endif -%}
                 {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
                 {%- assign _sorted_list = _sorted_list | reverse -%}
 
