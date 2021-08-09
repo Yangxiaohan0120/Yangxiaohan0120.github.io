@@ -23,7 +23,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				Show All
 				<sup>{{site.posts.size}}</sup>
 			</a>
-			
+
 			<!-- Article List -->
 			<div class="mini-post-list js-result d-none">
 				{% for _article in site.categories.Life%}
@@ -31,12 +31,12 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				{% comment %} group by year {% endcomment %}
 				{%- assign _currentdate = _article.date | date: '%Y' -%}
 				{%- if _currentdate != _date -%}
-				{%- unless forloop.first -%}</section>{%- endunless -%}
-				<section>
-				<span class="fa listing-seperator">
-					<span class="tag-text">{{ _currentdate }}</span>
-				</span>
-				{%- assign _date = _currentdate -%}
+					{%- unless forloop.first -%}</section>{%- endunless -%}
+					<section>
+					<span class="fa listing-seperator">
+						<span class="tag-text">{{ _currentdate }}</span>
+					</span>
+					{%- assign _date = _currentdate -%}
 				{%- endif -%}
 
 				<div class="post-preview item" data-tags="{{ _tags }}">
@@ -58,5 +58,3 @@ https://github.com/kitian616/jekyll-TeXt-theme
 </div>
 </div>
 </div>
-
-
