@@ -19,7 +19,11 @@ https://github.com/kitian616/jekyll-TeXt-theme
 			<ul>
 
 			<!-- Tags (as filter) -->
-
+			<a class="tag-button--all" data-encode="">
+				Show All
+				<sup>{{site.posts.size}}</sup>
+			</a>
+			
 			<!-- Article List -->
 			<div class="mini-post-list js-result d-none">
 				{% for _article in site.categories.Life%}
