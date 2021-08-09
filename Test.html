@@ -40,10 +40,10 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
             <!-- Article List -->
 			<div class="mini-post-list js-result d-none">
-                {%- assign _sorted_list='' | split: ',' -%}
+                {%- assign _sorted_list= '' | split: ',' -%}
                 {% for post in site.posts %}
                     {% if post.categories contains 'Life' %}
-                        {% _sorted_list | push: post %}
+                        {% assign _sorted_list = _sorted_list | push: post %}
                     {% endif %}
                 {% endfor %}
                 {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
