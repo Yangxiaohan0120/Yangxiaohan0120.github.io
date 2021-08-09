@@ -3,12 +3,12 @@
     "title": "The Road Less Traveled",
     "author": "Xiaohan <xiaohanyang0120@gmail.com>",
     "version": "1.8.2",
-    "homepage": "http://huxpro.github.io",
+    "homepage": "http:///yangxiaohan0120.github.io",
     "repository": {
         "type": "git",
         "url": "https://yangxiaohan0120.github.io"
     },
-    "bugs": "https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/",
+    "bugs": "https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io",
     "devDependencies": {
         "grunt": ">=1.3.0",
         "grunt-banner": "~0.2.3",
