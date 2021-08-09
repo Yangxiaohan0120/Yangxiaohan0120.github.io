@@ -16,17 +16,22 @@ https://github.com/kitian616/jekyll-TeXt-theme
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<ul>
+		<ul>
+		<!-- Tags (as filter) -->
+		<div id='tag_cloud' class="tags tags-sup js-tags"></div>
+			<a class="tag-button--all" data-encode="">
+				Show All
+				<sup>{{site.posts.size}}</sup>
+			</a>
+		</div>
+		</ul>
+	</div>
+</div>
+</div>
 
-			<!-- Tags (as filter) -->
-			<div id='tag_cloud' class="tags tags-sup js-tags"></div>
-				<a class="tag-button--all" data-encode="">
-					Show All
-					<sup>{{site.posts.size}}</sup>
-				</a>
-			</div>
-			</ul>
-
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			<ul>
 			<!-- Article List -->
 			<div class="mini-post-list js-result d-none">
