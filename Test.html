@@ -18,6 +18,18 @@ https://github.com/kitian616/jekyll-TeXt-theme
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			<ul>
 				{% for _article in site.categories.Life%}
+
+				{% comment %} group by year {% endcomment %}
+				{%- assign _currentdate = _article.date | date: '%Y' -%}
+				{%- if _currentdate != _date -%}
+				{%- unless forloop.first -%}</section>{%- endunless -%}
+				<section>
+				<span class="fa listing-seperator">
+					<span class="tag-text">{{ _currentdate }}</span>
+				</span>
+				{%- assign _date = _currentdate -%}
+				{%- endif -%}
+
 				<div class="post-preview item" data-tags="{{ _tags }}">
 				    <a href="{{ _article.url | prepend: site.baseurl }}">
 				        <h2 class="post-title">
@@ -36,3 +48,5 @@ https://github.com/kitian616/jekyll-TeXt-theme
 </div>
 </div>
 </div>
+
+
