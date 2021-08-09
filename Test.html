@@ -40,13 +40,12 @@ https://github.com/kitian616/jekyll-TeXt-theme
 
             <!-- Article List -->
 			<div class="mini-post-list js-result d-none">
-                {%- capture _sorted_list -%}
+                {%- assign _sorted_list='' | split: ',' -%}
                 {% for post in site.posts %}
                     {% if post.categories contains 'Life' %}
-                        {% _sorted_list.append(post) %}
+                        {% _sorted_list | push: post %}
                     {% endif %}
                 {% endfor %}
-                {% endcapture %}
                 {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
                 {%- assign _sorted_list = _sorted_list | reverse -%}
     
