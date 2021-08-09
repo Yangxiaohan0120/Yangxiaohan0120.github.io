@@ -17,10 +17,20 @@ https://github.com/kitian616/jekyll-TeXt-theme
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			<ul>
-				{% for post in site.categories.Life%}
-				<li>
-					<a href="{{ post.url }}">{{ post.title }}</a>
-				</li>
+				{% for _article in site.categories.Life%}
+				<div class="post-preview item" data-tags="{{ _tags }}">
+				    <a href="{{ _article.url | prepend: site.baseurl }}">
+				        <h2 class="post-title">
+                            {{ _article.title }}
+				        </h2>
+				        {% if _article.subtitle %}
+				        <h3 class="post-subtitle">
+				            {{ _article.subtitle }}
+				        </h3>
+				        {% endif %}
+				    </a>
+					<hr>
+				</div>
 				{% endfor %}
 			</ul>
 </div>
