@@ -9,6 +9,5 @@ category: Movies
 catalog: true
 tags:
     - 狮子王
-    - 丁丁
 ---
 
