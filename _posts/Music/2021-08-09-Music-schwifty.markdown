@@ -10,20 +10,19 @@ catalog: true
 tags:
     - 瑞克与莫蒂
 ---
-##
 
 
-* yeah~~get schwifty
-
-##
-
+> yeah~~get schwifty
 
 <audio id="audio" controls="" preload="none">
       <source id="mp3" src="mp3/schwifty.mp3">
 </audio>
 
-##
 
+<video id="video" controls="" preload="none">
+      <source id="mp4" src="https://www.bilibili.com/video/BV1Xy4y1q79A?from=search&seid=9892458777767233651" type="video/mp4">
+      </video>
+      
 ### 由来
 
 
