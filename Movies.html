@@ -26,7 +26,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 					</a>
 
 					{% capture tags %}
-					{% for tag in site.tags %}
+					{% for tag in site.categories.Movies.tags %}
 					<a data-sort="{{ site.categories.Movies.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}"
 						data-encode="{{ tag[0] | strip | url_encode }}"
 						class="tag-button"
@@ -39,7 +39,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 					{{ tags | split:'__SEPERATOR__' | sort }}
 				</div>
 
-				<div class="mini-post-list js-result d-none"></div>
+				<div class="mini-post-list js-result d-none">
 					{% for _article in site.categories.Movies%}
 	
 					{% comment %} group by year {% endcomment %}
