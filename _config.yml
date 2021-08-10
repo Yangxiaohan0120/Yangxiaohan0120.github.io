@@ -1,9 +1,9 @@
 # Site settings
 title: The Road Less Traveled
 SEOTitle: The Road Less Traveled | The Road Less Traveled
-header-img: img/home-bg.jpg
+header-img: "img/Home.jpg"
 email: xiaohanyang0120@gmail.com
-description: "关于读书，音乐与电影，偶尔黑客 | 杨晓寒，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
+description: "关于读书，音乐与电影，偶尔黑客."
 keyword: "杨晓寒, 博客, 互联网"
 url: "https://yangxiaohan0120.github.io/"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
