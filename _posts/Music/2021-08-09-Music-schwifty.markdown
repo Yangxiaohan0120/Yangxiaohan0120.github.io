@@ -14,14 +14,23 @@ tags:
 
 > yeah~~get schwifty
 
-<audio id="audio" controls="" preload="none">
+<!-- <audio id="audio" controls="" preload="none">
       <source id="mp3" src="mp3/schwifty.mp3">
       <embed height="50" width="100" src="horse.mp3">
-</audio>
-
+</audio> -->
 
 
 <iframe src="//player.bilibili.com/player.html?aid=800489596&bvid=BV1Xy4y1q79A&cid=260564493&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<script>
+function changeFrameHeight(){
+	var ifm= document.getElementById("myiframe");
+	ifm.height=document.documentElement.clientHeight;
+
+}
+window.onresize=function(){  
+	 changeFrameHeight();  
+} 
+</script>
 
 
 ### 由来
