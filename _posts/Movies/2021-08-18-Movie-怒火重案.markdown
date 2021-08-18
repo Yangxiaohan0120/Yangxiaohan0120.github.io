@@ -1,0 +1,52 @@
+---
+layout:     post
+title:      "观影记一"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2021-08-09 14:18
+author:     "Xiaohan"
+header-img: "img/post-bg-os-metro.jpg"
+category: Music
+catalog: true
+tags:
+    - 怒火·重案
+---
+
+
+> 世上本就没有非黑即白的事情，就像是电车问题没有最优解一样，站在不同人的立场上，自然有不同的选择。
+
+<!-- <audio id="audio" controls="" preload="none">
+      <source id="mp3" src="mp3/schwifty.mp3">
+      <embed height="50" width="100" src="horse.mp3">
+</audio> -->
+
+<iframe height=500 width=500 src="/_posts/Movies/nuhuo.jpg"></iframe>
+
+<!-- <iframe src="//player.bilibili.com/player.html?aid=800489596&bvid=BV1Xy4y1q79A&cid=260564493&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<script>
+function changeFrameHeight(){
+	var ifm= document.getElementById("myiframe");
+	ifm.height=document.documentElement.clientHeight;
+
+}
+window.onresize=function(){  
+	 changeFrameHeight();  
+} 
+</script> -->
+
+
+### 记事
+
+观影于2021年8月14日
+
+### 评价
+
+* 推荐指数4.5颗星。
+* 扣的半颗星在于最后主角团队下线太仓促，明明前面那么缜密，最后抢劫案行动不够严谨。
+* 有很多TVB的演员客串，非常不错
+* 导演陈木胜真的太棒了，新警察故事也是他的作品，这种追求梦想，一辈子在燃烧的人真的令人敬佩
+
+### 感触
+
+道德和利益的抉择，现代社会还有几个能像邦主一样坚持道德的呢？
+
+借用电影的最后一句话，“如果那天是我咱俩抓的人换过来，那么现在的命运会不会也换过来。“ 不会的，心有不甘的人，早已谱写好命运。
