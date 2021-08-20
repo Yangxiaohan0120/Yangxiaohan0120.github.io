@@ -14,8 +14,6 @@ tags:
 
 > 世上本就没有非黑即白的事情，就像是电车问题没有最优解一样，站在不同人的立场上，自然有不同的选择。
 
-[comment]: <> (<iframe height=500 width=500 src="_posts/Movies/nuhuo.jpg"></iframe>)
-![]("https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/tree/main/img/nuhuo.jpg)
 ### 记事
 
 观影于2021年8月14日
