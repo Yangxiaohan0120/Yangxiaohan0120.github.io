@@ -4,7 +4,7 @@ title:      "关于Mysql root 密码修改的bug"
 subtitle:   ""
 date:       2021-08-24 15:50
 author:     "Xiaohan"
-header-img: "img/Borges.jpg"
+header-img: "img/Learning-mysql.jpg"
 category: Learning
 catalog: true
 tags:
