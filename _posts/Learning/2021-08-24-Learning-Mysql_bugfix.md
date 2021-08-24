@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "关于Mysql root 密码修改的bug"
-subtitle:   ""
+subtitle:   "\mysql\"
 date:       2021-08-24 15:50
 author:     "Xiaohan"
 header-img: "img/Learning-mysql.jpg"
