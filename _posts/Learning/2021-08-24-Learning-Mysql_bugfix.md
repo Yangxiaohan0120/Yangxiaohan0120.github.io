@@ -8,7 +8,10 @@ header-img: "img/Learning-mysql.jpg"
 category: Learning
 catalog: true
 tags:
-    - Mysql，Bug，root，password
+    - Mysql
+    - Bug
+    - root
+    - password
 ---
 
 > 经验贴
