@@ -11,8 +11,6 @@ baseurl: ""                             # for example, '/blog' if your blog host
 # 自定义永久链接
 permalink: /blog/:year/:month/:day/:title/
 
-
-
 # Publish posts or collection documents with a future date.
 future: true
 
@@ -84,7 +82,7 @@ ga_domain: yangxiaohan0120.github.io
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "杨晓寒"
-sidebar-avatar: /img/avatar-xiaohan-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: ![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/img/avatar-xiaohan.jpg)      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
