@@ -76,7 +76,15 @@ netease_comment: false
 # Google Analytics
 ga_track_id: 'G-E5XHPSL902'            # Format: UA-xxxxxx-xx
 ga_domain: yangxiaohan0120.github.io
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F65K7NT1XR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-F65K7NT1XR');
+</script>
 
 
 # Sidebar settings
