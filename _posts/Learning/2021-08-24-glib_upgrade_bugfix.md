@@ -20,8 +20,8 @@ tags:
 
 为了安装perl 库的一个包不小心升级了整个系统的glib库导致了relocation error
 
-![](001.png)
-![](002.png)
+![](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/img/in-post/glibc/001.png)
+![](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/img/in-post/glibc/002.png)
 
 ## 解决过程
 
@@ -56,7 +56,7 @@ sln /usr/lib64/libc-2.17.so /lib64/libc.so.6
 ls -ltr | grep "2.19"
 ```
 
-![](003.png)
+![](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/img/in-post/glibc/003.png)
 
 找到相关的2.19的库与软连接，可以从lib64从将对应的2.17版本拷贝过来，重新连接
 
