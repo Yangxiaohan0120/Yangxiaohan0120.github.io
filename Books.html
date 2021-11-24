@@ -53,6 +53,27 @@ https://github.com/kitian616/jekyll-TeXt-theme
 					{%- if forloop.last -%}</section>{%- endif -%}
 				{% endfor %}
 			</div>
+			
+			<!-- comment -->
+			<div class="container">
+				<script type="text/javascript" src="public/plugins/components/gitalk.min.js"></script>
+				<script type="text/javascript">
+					window.title_id = window.location.hash.match(/#(.*?)([?]|$)/) ? window.location.hash.match(/#(.*?)([?]|$)/)[1] : '/';
+					const gitalk = new Gitalk({
+						// 这个需要在github上申请一个OAuth application
+				        clientID: '27ab6265b4a2124d158c',   // GitHub Application Client ID
+				        clientSecret: '822f5ac59aad88a6c8e2b97c0333c82c32f30577',   // GitHub Application Client Secret
+				        repo: 'yangxiaohan0120.github.io', // //存储你评论 issue 的 Github 仓库名
+				        owner: 'Yangxiaohan0120',
+				        admin: ['Yangxiaohan0120'],    // 这个仓库的管理员
+						title: decodeURI(window.title_id),
+						distractionFreeMode: false,	// 是否添加全屏遮罩
+						id: md5(window.location.hash),	// 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
+						enableHotKey: true,	// 提交评论快捷键(cmd/ctrl + enter)
+					})
+				</script>
+				<script type="text/javascript" src="public/plugins/components/docsify.gitalk.js"></script>
+			</div>
 		</div>
 	</div>
 </div>
@@ -60,23 +81,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<script type="text/javascript" src="public/plugins/components/gitalk.min.js"></script>
-			<script type="text/javascript">
-				window.title_id = window.location.hash.match(/#(.*?)([?]|$)/) ? window.location.hash.match(/#(.*?)([?]|$)/)[1] : '/';
-				const gitalk = new Gitalk({
-					// 这个需要在github上申请一个OAuth application
-			        clientID: '27ab6265b4a2124d158c',   // GitHub Application Client ID
-			        clientSecret: '822f5ac59aad88a6c8e2b97c0333c82c32f30577',   // GitHub Application Client Secret
-			        repo: 'yangxiaohan0120.github.io', // //存储你评论 issue 的 Github 仓库名
-			        owner: 'Yangxiaohan0120',
-			        admin: ['Yangxiaohan0120'],    // 这个仓库的管理员
-					title: decodeURI(window.title_id),
-					distractionFreeMode: false,	// 是否添加全屏遮罩
-					id: md5(window.location.hash),	// 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
-					enableHotKey: true,	// 提交评论快捷键(cmd/ctrl + enter)
-				})
-			</script>
-			<script type="text/javascript" src="public/plugins/components/docsify.gitalk.js"></script>
+			
 		</div>
 	</div>
 </div>
