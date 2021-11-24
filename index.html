@@ -45,19 +45,22 @@ description: "「少有人走的路 到处都是风景」"
 </ul>
 {% endif %}
 
-<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
-<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
-<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script>
-    const gitalk = new Gitalk({
-        // 这个需要在github上申请一个OAuth application
+
+<script type="text/javascript" src="public/plugins/components/gitalk.min.js"></script>
+<script type="text/javascript">
+	window.title_id = window.location.hash.match(/#(.*?)([?]|$)/) ? window.location.hash.match(/#(.*?)([?]|$)/)[1] : '/';
+	const gitalk = new Gitalk({
+		// 这个需要在github上申请一个OAuth application
         clientID: '27ab6265b4a2124d158c',   // GitHub Application Client ID
         clientSecret: '822f5ac59aad88a6c8e2b97c0333c82c32f30577',   // GitHub Application Client Secret
         repo: 'yangxiaohan0120.github.io', // //存储你评论 issue 的 Github 仓库名
         owner: 'Yangxiaohan0120',
         admin: ['Yangxiaohan0120'],    // 这个仓库的管理员
-        distractionFreeMode: true,  // 是否添加全屏遮罩
-        id: window.location.pathname    // 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
-    })
-    gitalk.render('gitalk-container');    // 渲染Gitalk评论组件
+		title: decodeURI(window.title_id),
+		distractionFreeMode: false,	// 是否添加全屏遮罩
+		id: md5(window.location.hash),	// 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
+		enableHotKey: true,	// 提交评论快捷键(cmd/ctrl + enter)
+	})
 </script>
+<script type="text/javascript" src="public/plugins/components/docsify.gitalk.js"></script>
+
