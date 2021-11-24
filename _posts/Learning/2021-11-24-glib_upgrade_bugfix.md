@@ -2,16 +2,14 @@
 layout:     post
 title:      "关于glibc库升级带来的relocation error问题"
 subtitle:   "glibc"
-date:       2021-08-24 15:50
+date:       2021-11-24 11:50
 author:     "Xiaohan"
-header-img: "img/Learning-mysql.jpg"
+header-img: "img/Books001.jpg"
 category: Learning
 catalog: true
 tags:
-    - Mysql
+    - glibc
     - Bug
-    - root
-    - password
 ---
 
 > 经验贴
