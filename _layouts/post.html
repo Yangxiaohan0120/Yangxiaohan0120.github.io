@@ -149,13 +149,13 @@ layout: default
 <script type="text/javascript">
 	var title = location.pathname.substr(0, 50);
 	var gitalk = new Gitalk({
-        clientID: '{{ theme.gitalk.ClientID }}',
-        clientSecret: '{{ theme.gitalk.ClientSecret }}',
-        repo: '{{ theme.gitalk.repo }}',
-        owner: '{{ theme.gitalk.githubID }}',
-        admin: ['{{ theme.gitalk.adminUser }}'],
+        clientID: '{{ site.gitalk.ClientID }}',
+        clientSecret: '{{ site.gitalk.ClientSecret }}',
+        repo: '{{ site.gitalk.repo }}',
+        owner: '{{ site.gitalk.githubID }}',
+        admin: ['{{ site.gitalk.adminUser }}'],
         id: title,
-        distractionFreeMode: '{{ theme.gitalk.distractionFreeMode }}'
+        distractionFreeMode: '{{ site.gitalk.distractionFreeMode }}'
     })
     gitalk.render('gitalk-container')           
 </script>
