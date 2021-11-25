@@ -95,11 +95,12 @@ gitalk:
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language: zh-CN
 
+
 # Disqus settings
-disqus_username: xhYang
+# disqus_username: xhYang
 
 # Netease settings
-netease_comment: false
+# netease_comment: false
 
 # Analytics settings
 # Baidu Analytics 
