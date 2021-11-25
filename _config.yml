@@ -86,7 +86,7 @@ gitalk:
   owner: 'Yangxiaohan0120'
   github_id:  'Yangxiaohan0120' #github帐号 例：CodeHaotian
   # id: location.pathname  #此设置参照下文常见问题说明
-  repo: 'Yangxiaohan0120.github.io'  #存放评论的仓库名称
+  repo: 'gitalkComment'  #存放评论的仓库名称
   client_id:  '27ab6265b4a2124d158c' #application的id，即上文Client ID
   client_secret: '822f5ac59aad88a6c8e2b97c0333c82c32f30577' #application的密码，即上文Client Secret
   admin_user: 'Yangxiaohan0120' #页面显示联系**初始化评论 例：CodeHaotian
