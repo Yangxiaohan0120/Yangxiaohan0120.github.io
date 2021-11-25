@@ -46,6 +46,37 @@ description: "「少有人走的路 到处都是风景」"
 {% endif %}
 
 
+
+
+<div id="gitalk-container">
+  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '27ab6265b4a2124d158c',
+      clientSecret: '822f5ac59aad88a6c8e2b97c0333c82c32f30577',
+      repo: 'yangxiaohan0120.github.io',
+      owner: 'Yangxiaohan0120',
+      admin: ['Yangxiaohan0120'],
+      title: location.hash.match(/#(.*?)([?]|$)/)[1],
+      id: location.hash.match(/#(.*?)([?]|$)/)[1],
+    })
+    // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
+    window.onhashchange = function(event){
+      if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
+        location.reload()
+      }
+    }
+    // 由于docsify/lib/plugins/gitalk.min.js文件中已经有下面代码了，所以不需要在写一次了
+    // gitalk.render('gitalk-container')
+  </script>
+</div>
+
+
+<!-- 
+
 <div class="block">
 	<script type="text/javascript" src="public/plugins/components/gitalk.min.js"></script>
 	<script type="text/javascript">
@@ -65,3 +96,12 @@ description: "「少有人走的路 到处都是风景」"
 	</script>
 	<script type="text/javascript" src="public/plugins/components/docsify.gitalk.js"></script>
 </div>
+
+-->
+
+
+
+
+
+
+
