@@ -60,22 +60,25 @@ kramdown:
       start_line: 1
 
 
+# Multiple Comment System Support
+comments:
+  # Available values: tabs | buttons
+  style: tabs
+  # Choose a comment system to be displayed by default.
+  # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
+  active: gitalk
+  # Setting `true` means remembering the comment system selected by the visitor.
+  storage: true
+  # Lazyload all comment systems.
+  lazyload: false
+  # Modify texts or order for any navs, here are some examples.
+  nav:
+    gitalk:
+     order: -2
+    disqusjs:
+     text: Load Disqus
+     order: -1
 
-# Disqus settings
-disqus_username: xhYang
-
-# Netease settings
-netease_comment: false
-
-
-
-# Analytics settings
-# Baidu Analytics 
-# ba_track_id: [your track id]
-
-# Google Analytics
-ga_track_id: 'G-EHKPJPFCKN'            # Format: UA-xxxxxx-xx
-ga_domain: yangxiaohan0120.github.io
 
 # gitalk settings
 gitalk:
@@ -91,6 +94,20 @@ gitalk:
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language: zh-CN
+
+# Disqus settings
+disqus_username: xhYang
+
+# Netease settings
+netease_comment: false
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'G-EHKPJPFCKN'            # Format: UA-xxxxxx-xx
+ga_domain: yangxiaohan0120.github.io
 
 
 
