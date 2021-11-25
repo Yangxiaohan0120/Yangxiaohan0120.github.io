@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "gitalk": "^1.7.2",
+        "gitment": "0.0.3",
         "hexo-generator-sitemap": "^2.1.0",
         "hexo-plugin-gitalk": "^0.2.0"
     }
