@@ -14,7 +14,11 @@
         "grunt-banner": "~0.2.3",
         "grunt-contrib-less": "^2.0.0",
         "grunt-contrib-uglify": "^4.0.1",
-        "grunt-contrib-watch": "^1.1.0"
+        "grunt-contrib-watch": "^1.1.0",
+        "md5": "^2.3.0",
+        "moment": "^2.29.1",
+        "request": "^2.88.2",
+        "xml-parser": "^1.2.1"
     },
     "scripts": {
         "start": "bundle exec jekyll serve -w -l --host 0.0.0.0",
@@ -23,6 +27,8 @@
         "push": "git push origin master --tag"
     },
     "dependencies": {
-        "gitalk": "^1.7.2"
+        "gitalk": "^1.7.2",
+        "hexo-generator-sitemap": "^2.1.0",
+        "hexo-plugin-gitalk": "^0.2.0"
     }
 }
