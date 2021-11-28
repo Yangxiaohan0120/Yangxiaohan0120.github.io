@@ -13,8 +13,6 @@ tags:
     - SMTM10
 ---
 
-> yeah~~get schwifty
-
 <iframe 
 src="//player.bilibili.com/player.html?aid=721821552&bvid=BV1AS4y1R7Xu&cid=445420771&page=1" 
 scrolling="no" 
@@ -28,8 +26,8 @@ width=600>
 
 ### 歌词摘录
 
-![](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/img/in-post/limosine/lyric1.jpeg)
-![](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/img/in-post/limosine/lyric2.jpeg)
+![](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/img/in-post/limosine/lyric1.png)
+![](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/img/in-post/limosine/lyric2.png)
 
 ### 感触
 
