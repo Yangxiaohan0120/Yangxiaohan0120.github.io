@@ -4,7 +4,7 @@ title:      "豪华轿车-limousine"
 subtitle:   " \"BE'O Feat. MINO\""
 date:       2021-08-12 14:18
 author:     "Xiaohan"
-header-img: "img/post-sample-image.jpg"
+header-img: "img/limousine.jpg"
 category: Music
 catalog: true
 tags:
