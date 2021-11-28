@@ -21,8 +21,8 @@ border="0"
 frameborder="no" 
 framespacing="0" 
 allowfullscreen="true" 
-height=600 
-width=800> 
+height=450 
+width=600> 
 </iframe>
 
 ### 由来
