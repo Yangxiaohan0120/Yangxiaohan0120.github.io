@@ -14,18 +14,16 @@ tags:
 
 > yeah~~get schwifty
 
-<iframe src="//player.bilibili.com/player.html?aid=800489596&bvid=BV1Xy4y1q79A&cid=260564493&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<script>
-function changeFrameHeight(){
-	var ifm= document.getElementById("myiframe");
-	ifm.height=document.documentElement.clientHeight;
-
-}
-window.onresize=function(){  
-	 changeFrameHeight();  
-} 
-</script>
-
+<iframe 
+src="//player.bilibili.com/player.html?aid=800489596&bvid=BV1Xy4y1q79A&cid=260564493&page=1" 
+scrolling="no" 
+border="0" 
+frameborder="no" 
+framespacing="0" 
+allowfullscreen="true" 
+height=600 
+width=800> 
+</iframe>
 
 ### 由来
 
