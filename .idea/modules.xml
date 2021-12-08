@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../LearnPython/.idea/LearnPython.iml" filepath="$PROJECT_DIR$/../LearnPython/.idea/LearnPython.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LearningR/.idea/LearningR.iml" filepath="$PROJECT_DIR$/../LearningR/.idea/LearningR.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Yangxiaohan0120.github.io.iml" filepath="$PROJECT_DIR$/.idea/Yangxiaohan0120.github.io.iml" />
     </modules>
   </component>
