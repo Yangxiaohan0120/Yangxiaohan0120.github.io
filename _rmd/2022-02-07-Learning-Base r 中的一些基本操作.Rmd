@@ -372,9 +372,9 @@ md
 ```{r,eval=T,collapse=T}
 library(reshape2)
 names(airquality) <- tolower(names(airquality))
-airquality
+head(airquality)
 aqm <- melt(airquality, id=c("month", "day"), na.rm=TRUE)
-aqm
+head(aqm)
 acast(aqm, month ~ variable, mean, margins = TRUE)
 dcast(aqm, month ~ variable, mean, margins = c("month", "variable"))
 ```
