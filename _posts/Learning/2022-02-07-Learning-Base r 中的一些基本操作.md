@@ -348,7 +348,7 @@ attach(mtcars)
 ```
 
 ![plot of chunk unnamed-chunk-17](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-17-1.png)
-
+![](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-17-1.png)
 ```r
   plot(mpg,wt)
 ```
