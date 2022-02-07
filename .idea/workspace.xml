@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_posts/Learning/2021-12-28-Learning-BinarySearch的变种.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/code001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/in-post/code002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/in-post/code003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/in-post/code004.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/in-post/code005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mp3/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mp3/offline.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/Learning/2021-12-28-Learning-BinarySearch的变种.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/Learning/2021-12-28-Learning-BinarySearch的变种.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offline.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,9 @@
       <workItem from="1639619140781" duration="256000" />
       <workItem from="1640098114140" duration="744000" />
       <workItem from="1640099031719" duration="27000" />
-      <workItem from="1640668576675" duration="1448000" />
+      <workItem from="1640668576675" duration="1995000" />
+      <workItem from="1640860839909" duration="28000" />
+      <workItem from="1644200688522" duration="362000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1638953720904</created>
@@ -108,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640099040274</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <created>1640670309886</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640670309886</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
