@@ -2,7 +2,7 @@
 layout:     post
 title:      "R codebase（一）基本操作"
 subtitle:   "base R 的基本数据类型与处理"
-date:       2022-02-07 10:31
+date:       2022-02-07 22:31
 author:     "Xiaohan"
 header-img: "img/Rscripts.jpg"
 category: Learning
