@@ -16,7 +16,7 @@ tags:
 获取注解
 
 * 获取某个功能（function）的具体使用
-```{r}
+```{r,warning=F,error=F}
 ?mean
 ```
 

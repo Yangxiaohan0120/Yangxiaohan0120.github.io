@@ -21,10 +21,6 @@ tags:
 ?mean
 ```
 
-```
-## starting httpd help server ... done
-```
-
 * 获取某个短语，文件，或者词组的具体解释
 
 ```r
@@ -74,7 +70,6 @@ setwd(dir = "./")
 ### 1.向量（Vector）
 
 #### 创建
-
 |函数             |变量         |描述             |
 |:----------------|:------------|:----------------|
 | c(2,4,6)        | 2 4 6       | 新建向量        |
@@ -163,12 +158,11 @@ sd(x) ## 标准差
 cumsum(x) ## 按项递加求和
 ##  [1]  1  4  6 10 15 20 26 34 43 53
 log(x) ## log 以e为底
-##  [1] 0.0000000 1.0986123 0.6931472 1.3862944 1.6094379
-##  [6] 1.6094379 1.7917595 2.0794415 2.1972246 2.3025851
+##  [1] 0.0000000 1.0986123 0.6931472 1.3862944 1.6094379 1.6094379 1.7917595
+##  [8] 2.0794415 2.1972246 2.3025851
 exp(x) ## 指数 以e为底
-##  [1]     2.718282    20.085537     7.389056    54.598150
-##  [5]   148.413159   148.413159   403.428793  2980.957987
-##  [9]  8103.083928 22026.465795
+##  [1]     2.718282    20.085537     7.389056    54.598150   148.413159   148.413159
+##  [7]   403.428793  2980.957987  8103.083928 22026.465795
 max(x)
 ## [1] 10
 min(x)
@@ -257,11 +251,11 @@ apply(z,1,mean)
 ## [1] 2.5 3.5 4.5
 f<- function(x) {x/c(2,8)}
 apply(z,2,f)
-## Warning in x/c(2, 8): longer object length is not a multiple
-## of shorter object length
+## Warning in x/c(2, 8): longer object length is not a multiple of shorter object
+## length
 
-## Warning in x/c(2, 8): longer object length is not a multiple
-## of shorter object length
+## Warning in x/c(2, 8): longer object length is not a multiple of shorter object
+## length
 ##      [,1]  [,2]
 ## [1,] 0.50 2.000
 ## [2,] 0.25 0.625
@@ -349,6 +343,7 @@ attach(mtcars)
 ```
 
 ![plot of chunk unnamed-chunk-17](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-17-1.png)
+
 ```r
   plot(mpg,wt)
 ```
