@@ -1,24 +1,394 @@
 ---
 layout:     post
-title:      "Base r 中的一些基本操作"
-subtitle:   "test page"
+title:      "R codebase（一）基本操作"
+subtitle:   "base R"
 date:       2022-02-07 10:31
 author:     "Xiaohan"
 header-img: "img/code001.jpg"
 category: Learning
 catalog: true
 tags:
-    - Binary search
-    - 数据结构
+    - base r
 ---
 
-# Fig 
+## 一、help
 
-## Test
+获取注解
 
-```{r,eval = T}
-library(ggplot2)
-library(tidyverse)
-ggplot(mpg, aes(hwy, cty)) +
-    geom_point(aes(color = cyl)) + geom_smooth(method ="lm")
+* 获取某个功能（function）的具体使用
+```{r}
+?mean
 ```
+
+* 获取某个短语，文件，或者词组的具体解释
+```{r}
+help.search('weighted mean')
+```
+
+* 获取某个R包的具体使用
+```{r}
+help(package = 'dplyr')
+```
+
+* 获取某个变量的属性
+```{r,eval=F}
+str(iris)
+class(iris)
+```
+
+## 二、包的使用
+
+```{r,eval = F}
+## 包的安装
+install.packages("ggplot2")
+## 包的使用
+library(ggplot2)
+## 包内具体功能的使用
+dplyr::select
+## 导入数据
+data(iris)
+```
+
+## 三、工作目录
+
+```{r,eval=F}
+## 获取目录
+getwd()
+## 更改目录
+setwd(dir = "./")
+```
+
+
+## 四、数据结构
+
+### 1.向量（Vector）
+
+#### 创建
+|函数             |变量         |描述             |
+|:----------------|:------------|:----------------|
+| c(2,4,6)        | 2 4 6       | 新建向量        |
+| 2:6             | 2 3 4 5 6   | 有序连续整数向量|
+| seq(2,3,by=0.5) | 2.0 2.5 3.0 | 指定间隔向量    |
+| rep(1:2,times=3 | 1 2 1 2 1 2 | 向量重复        |
+| rep(1:2,each=3) | 1 1 1 2 2 2 | 向量元素重复    |
+
+#### 选择
+```{r,eval=TRUE,collapse=TRUE}
+x <- 1:10
+# 按位置选择元素
+x[4]
+x[2:4]
+# 按位置去除元素
+x[-4]
+x[-(2:4)] ## 不包含第二到第四
+x[c(1,5)] ## 不包含第一和第五
+# 选择特定值的元素
+x[x==10]
+x[x<0]
+subset(x,x>5)
+x[x %in% c(1,2,5)]
+# 选择特定名称的元素
+x['apple']
+```
+
+#### 基本功能
+```{r,eval=TRUE,collapse=TRUE}
+x <- c(1,3,2,4,5,5,6,8,9,10)
+x1 <- rep(1:2,times = 5)
+sort(x) ## 排序
+rev(x) ## 翻转
+table(x) ## 查看每个元素的数目
+unique(x) ## 去重复
+x + x1 ## 加
+x - x1 ## 减
+x * x1 ## 乘
+x / x1 ## 除
+all(x > 0) ## 判断是否都满足
+any(x < 8) ## 判断是否有一个满足
+```
+
+#### 基本函数
+```{r,eval=TRUE,collapse=TRUE}
+sum(x) ## 求和
+mean(x) ## 平均值
+median(x) ## 中值
+quantile(x) ## 分位数
+rank(x) ## 排序index
+var(x) ## 方差
+sd(x) ## 标准差
+cumsum(x) ## 按项递加求和
+log(x) ## log 以e为底
+exp(x) ## 指数 以e为底
+max(x)
+min(x)
+q <- c(1.2214,1.3324,1.4423)
+round(q,3) ## 保留位数
+signif(q,2) ## 精确度
+y <- rev(x)
+cor(x,y) ## 相关性
+```
+
+### 2.矩阵和数组
+
+#### 创建
+
+* 矩阵
+```{r,eval=T,collapse=TRUE}
+c <- seq(1,9)
+namerow <- c("R1","R2","R3")
+namecol <- c("C1","C2","C3")
+m <- matrix(c,nrow=3,ncol=3,byrow = TRUE,dimnames = list(namerow,namecol))
+m
+## nrow 行数 ncol 列数 byrow 按行填充还是按列填充，dimnames（行列名）
+```
+
+* 数组
+```{r,eval=T,collapse=TRUE}
+## myarray <- array(vector,dimension,dimnames)
+dim1 <- c("A1","A2")
+dim2 <- c("B1","B2","B3")
+dim3 <- c("C1","C2","C3","C4")
+z <- array(1:24,c(2,3,4),dimnames = list(dim1,dim2,dim3))
+z
+```
+
+#### 对矩阵的行和列调用函数
+
+apply(m,dimcode,f,fargs)
+
+* m代表矩阵
+* dimcode代表维度编号，1代表对每一行应用函数，2代表对每一列应用函数
+* f使用的函数运算(循环补齐)
+* fargs f函数可调用的参数
+
+```{r,eval=T,collapse=T}
+z <- matrix(1:6,nrow=3,ncol=2)
+z
+apply(z,1,mean)
+f<- function(x) {x/c(2,8)}
+apply(z,2,f)
+```
+
+#### 矩阵的组合
+```{r,eval=T,collapse=T}
+cbind(1,z) ## 行不变，列增加
+rbind(1,z) ## 列不变，行增加
+```
+
+### 3.列表
+
+#### 创建
+```{r,eval=T,collapse=T}
+j <- list(name="Joe",salary = 55000,union=T)
+j
+```
+
+#### 常用操作
+```{r,eval=F,collapse=T}
+## 索引
+j$salary
+j[1]
+## 增删
+j$age <- 45
+j$union <- NULL
+## 访问元素
+unlist(j)
+```
+
+### 4.数据框
+
+#### 创建
+
+mydata <- data.frame(col1,col2,col3)
+```{r,eval=T,collapse=T}
+patientID <- c(1,2,3,4)
+age <- c(25,34,28,51)
+diabetes <- c("Type1","Type2","Type1","Type1")
+status <- c("Poor","Improved","Excellent","Poor")
+patientData <- data.frame(patientID,age,diabetes,status)
+patientData
+```
+
+#### 基本操作
+
+* attach() 添加到R的搜索路径中
+* detach() 从搜索路径中解除
+* with()
+```{r,eval=T,collapse=T}
+attach(mtcars)
+  summary(mpg)
+  plot(mpg,disp)
+  plot(mpg,wt)
+detach(mtcars)
+```
+
+类似于矩阵的操作
+* cbind()
+* rbind()
+* dim()
+* subset()
+* apply()
+
+#### 数据框的合并
+merge()
+
+merge(x, y, by = intersect(names(x), names(y)),
+      by.x = by, by.y = by, all = FALSE, all.x = all, all.y = all,
+      sort = TRUE, suffixes = c(".x",".y"), no.dups = TRUE,
+      incomparables = NULL, ...)
+      
+```{r,eval=T,collapse=T}
+d1 <- data.frame(kids=c("Jack","Jill","Jillian","John"),states = c("CA","MA","MA","HI"))
+d1
+d2 <- data.frame(ages=c(10,7,12),kids=c("Jill","Lillian","Jack"))
+d2
+merge(d1,d2)
+merge(d1,d2,by.x="kids")
+merge(d1,d2,by.y = "ages")
+merge(d1,d2,all=T)
+```
+
+### 5.因子
+
+```{r,eval=T,collapse=T}
+status
+factor(status)
+factor(status,ordered=TRUE,levels = c("Poor","Improved","Excellent"))
+```
+
+#### tapply
+
+和apply类似，分组使用了因子的不同水平为标准
+```{r,eval=T,collapse=T}
+ages <- c(25,26,55,37,21,42)
+affils <- c("R","D","D","R","U","D")
+tapply(ages,affils,mean)
+```
+
+### 6.String
+
+x <- c("I","M")
+
+y <- c("P","C")
+
+|Strings                    |results              |
+|:--------------------------|:--------------------|
+|paste(x,y,sep =' ')        |"I P" "M C"          |
+|paste(x,collapse=' ')      |"I M"                |
+|grep("M",x)                |2                    |
+|gsub("M","A",x)            |"I" "A"              |
+|toupper(x)                 |"I" "M"              |
+|tolower(x)                 |"i" "m"              |
+|nchar(x)                   |1 1                  |
+
+## 五、其他数据操作
+
+### 1.缺失值的管理
+```{r,eval=T,collapse=T}
+y <- c(1,2,3,NA)
+is.na(y) ## 判断缺失值
+sum(y,na.rm = T) ## 排除缺失值
+leadership <- data.frame(manager=c(1,2,3,4,5),gender = c("M","F","F","M","F"),q1=c(5,2,3,NA,1),q2=c(1,2,NA,3,4))
+na.omit(leadership) ## 删除不完整的观测，数据框中删除带有NA的行
+```
+
+### 2.概率函数
+
+|分布名称                |缩写                          |
+|:=======================|:=============================|
+|Beta分布|beta|
+|二项分布|binom|
+|柯西分布|cauchy|
+|(非中心)卡方分布|chisq|
+|指数分布|exp|
+|F分布|f|
+|Gamma分布|gamma|
+|几何分布|geom|
+|超几何分布|hyper|
+|对数正态分布|lnorm|
+|Logistic分布|logis|
+|多项分布|multinom|
+|负二项分布|nbinom|
+|正态分布|norm|
+|泊松分布|pois|
+|Wilcoxon符号秩分布|signrank|
+|t分布|t|
+|均匀分布|unif|
+|Weibull分布|weibull|
+|Wilcoxon秩和分布|wilcox|
+
+```{r,eval=T,collapse=T,fig.height=5, fig.width=5}
+x<-seq(0,1,length.out=10000)
+plot(0,0,main='probability density function',xlim=c(0,1),ylim=c(0,2.5),ylab='y',xlab = 'x')
+lines(x,dbeta(x,0.5,0.5),col='red')
+lines(x,dbeta(x,1,2),col='green')
+lines(x,dbeta(x,2,2),col='pink')
+lines(x,dbeta(x,2,5),col='orange')
+lines(x,dbeta(x,1,3),col='blue')
+lines(x,dbeta(x,5,1),col='black')
+legend('top',legend=c('α=0.5,β=0.5','α=1,β=2','α=2,β=2','α=2,β=5','α=1,β=3','α=5,β=1'),col=c('red','green','pink','orange','blue','black'),lwd=1)
+```
+
+* dnorm() 密度分布
+* pnorm() 分布函数
+* qnorm() 分位数函数
+* rnorm() 生成随机数
+
+```{r,eval=T,collapse=T,fig.height=5, fig.width=5,error=F,warning=F}
+x <- pretty(c(-3,3),100) ## 生成符合标准正态分布的随机数
+plot(x,dnorm(x,mean = 0,sd = 1))
+plot(x,pnorm(x,mean = 0,sd = 1))
+plot(x,qnorm(x,mean = 0,sd = 1))
+plot(x,rnorm(x,mean = 0,sd = 1))
+```
+
+### 3.控制流
+
+* for循环
+    for (var in seq) statment
+* while
+    while (cond) statement
+* if-else
+    if(cond) statement1
+    else statement2
+* 自编函数
+    myfunction <- function(arg1,arg2, ... ){
+        statements
+        return(object)
+    }
+
+### 4.reshape2包
+
+#### 融合
+```{r,eval=T,collapse=T}
+library(reshape2)
+mydata <- data.frame(ID = c(1,1,2,2),Time=c(1,2,1,2),X1=c(5,3,6,2),X2=c(6,5,1,4))
+mydata
+md <- melt(mydata,id=c("ID","Time"))
+md
+```
+
+#### 重铸
+```{r,eval=T,collapse=T}
+library(reshape2)
+names(airquality) <- tolower(names(airquality))
+airquality
+aqm <- melt(airquality, id=c("month", "day"), na.rm=TRUE)
+aqm
+acast(aqm, month ~ variable, mean, margins = TRUE)
+dcast(aqm, month ~ variable, mean, margins = c("month", "variable"))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
