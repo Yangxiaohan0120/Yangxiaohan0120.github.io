@@ -347,13 +347,12 @@ attach(mtcars)
   plot(mpg,disp)
 ```
 
-![plot of chunk unnamed-chunk-17](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-17-1.png)
-![](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-17-1.png)
+![plot of chunk unnamed-chunk-17](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-17-1.png)
 ```r
   plot(mpg,wt)
 ```
 
-![plot of chunk unnamed-chunk-17](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-17-2.png)
+![plot of chunk unnamed-chunk-17](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-17-2.png)
 
 ```r
 detach(mtcars)
@@ -507,7 +506,7 @@ lines(x,dbeta(x,5,1),col='black')
 legend('top',legend=c('α=0.5,β=0.5','α=1,β=2','α=2,β=2','α=2,β=5','α=1,β=3','α=5,β=1'),col=c('red','green','pink','orange','blue','black'),lwd=1)
 ```
 
-![plot of chunk unnamed-chunk-22](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-22-1.png)
+![plot of chunk unnamed-chunk-22](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-22-1.png)
 
 * dnorm() 密度分布
 * pnorm() 分布函数
@@ -520,25 +519,25 @@ x <- pretty(c(-3,3),100) ## 生成符合标准正态分布的随机数
 plot(x,dnorm(x,mean = 0,sd = 1))
 ```
 
-![plot of chunk unnamed-chunk-23](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-23-1.png)
+![plot of chunk unnamed-chunk-23](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-23-1.png)
 
 ```r
 plot(x,pnorm(x,mean = 0,sd = 1))
 ```
 
-![plot of chunk unnamed-chunk-23](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-23-2.png)
+![plot of chunk unnamed-chunk-23](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-23-2.png)
 
 ```r
 plot(x,qnorm(x,mean = 0,sd = 1))
 ```
 
-![plot of chunk unnamed-chunk-23](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-23-3.png)
+![plot of chunk unnamed-chunk-23](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-23-3.png)
 
 ```r
 plot(x,rnorm(x,mean = 0,sd = 1))
 ```
 
-![plot of chunk unnamed-chunk-23](https://github.com/Yangxiaohan0120/Yangxiaohan0120.github.io/blob/main/figure/unnamed-chunk-23-4.png)
+![plot of chunk unnamed-chunk-23](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-23-4.png)
 
 ### 3.控制流
 
