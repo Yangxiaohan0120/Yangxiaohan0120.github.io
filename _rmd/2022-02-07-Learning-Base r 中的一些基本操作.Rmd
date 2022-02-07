@@ -7,7 +7,6 @@ author:     "Xiaohan"
 header-img: "img/code001.jpg"
 category: Learning
 catalog: true
-status: process
 tags:
     - Binary search
     - 数据结构
