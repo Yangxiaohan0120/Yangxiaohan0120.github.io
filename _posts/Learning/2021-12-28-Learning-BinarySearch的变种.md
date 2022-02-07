@@ -19,7 +19,7 @@ tags:
 
 ## Test
 
-```{r}
+```{r,eval = T}
 library(ggplot2)
 library(tidyverse)
 ggplot(mpg, aes(hwy, cty)) +
