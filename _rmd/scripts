@@ -1,0 +1,7 @@
+Rmd 到 md 的转换
+
+knitr::knit(input = "_rmd/2022-02-08-Learning-R codebase (五) 高级数据分析.Rmd",output = "_posts/Learning/2022-02-08-Learning-R codebase (五) 高级数据分析.md")
+
+图片链接
+
+https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure
