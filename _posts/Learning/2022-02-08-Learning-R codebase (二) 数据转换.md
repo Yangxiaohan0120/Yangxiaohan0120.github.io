@@ -28,7 +28,7 @@ read_*(file, col_names = TRUE, col_types = NULL, locale = default_locale(), na =
 
 分号分隔：read_csv2("file2.csv")
 
-任意分隔符：read_delim("file.txt", delim = "|")
+任意分隔符：read_delim("file.txt", delim = "'|'")
 
 任意宽度的空格分隔：read_fwf("file.fwf", col_positions = c(1, 3, 5))
 
@@ -323,7 +323,7 @@ unite(datax, country, year, col = "c_y", sep = "")
 
 ![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/purrr/purrr_page-0002.jpg)
 
-## 七、String累的修改
+## 七、String类的修改
 
 ![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/String/strings_page-0001.jpg)
 
