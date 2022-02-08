@@ -299,20 +299,37 @@ unite(datax, country, year, col = "c_y", sep = "")
 ## 6 CY2000  213K/1T
 ```
 
-
-
 ## 三、数据的形式转换（dplyr）
 
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/1.png)
+
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/dplyr/data-transformation_page-0001.jpg)
+
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/dplyr/data-transformation_page-0002.jpg)
 
 ## 四、数据的形式转换（data.table）
 
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/datatable/datatable_page-0001.jpg)
+
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/datatable/datatable_page-0002.jpg)
+
 ## 五、数据的形式转换（sjmisc）
+
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/sjmisc/sjmisc_page-0001.jpg)
 
 ## 六、apply的使用（purr）
 
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/purrr/purrr_page-0001.jpg)
+
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/purrr/purrr_page-0002.jpg)
+
 ## 七、String累的修改
 
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/String/strings_page-0001.jpg)
 
+![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/String/strings_page-0002.jpg)
+
+## 参考链接
 
 
 
