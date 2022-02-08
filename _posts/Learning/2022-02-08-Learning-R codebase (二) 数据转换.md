@@ -331,7 +331,7 @@ unite(datax, country, year, col = "c_y", sep = "")
 
 ## 参考链接
 
-<ref/>https://github.com/rstudio/cheatsheets/tree/54f418c245ba22ee2f65ff2b760c77650c08888e
+<https://github.com/rstudio/cheatsheets/tree/54f418c245ba22ee2f65ff2b760c77650c08888e>
 
 cheatsheet 引自 Favio André Vázquez 
 
