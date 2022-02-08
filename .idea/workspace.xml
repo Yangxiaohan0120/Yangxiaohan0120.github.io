@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_posts/Learning/2022-02-07-Learning-R codebase (一) 基本操作.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_rmd/2022-02-07-Learning-R codebase (一) 基本操作.Rmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (二) 数据转换.Rmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Learning/2022-02-07-Learning-Base r 中的一些基本操作.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rmd/2022-02-07-Learning-Base r 中的一些基本操作.Rmd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/css/hux-blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/hux-blog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/hux-blog.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/hux-blog.min.css" afterDir="false" />
     </list>
@@ -101,7 +95,7 @@
       <workItem from="1644200688522" duration="5607000" />
       <workItem from="1644212249048" duration="5016000" />
       <workItem from="1644241023561" duration="2130000" />
-      <workItem from="1644283265599" duration="498000" />
+      <workItem from="1644283265599" duration="1020000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1638953720904</created>
@@ -285,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644242648223</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="second">
+      <created>1644285186758</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1644285186758</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +295,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="second" />
+    <option name="LAST_COMMIT_MESSAGE" value="second" />
   </component>
 </project>

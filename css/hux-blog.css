@@ -323,7 +323,7 @@ pre.highlight {
 }
 .highlight .err {
   color: #960050;
-  background-color: #F5F5DC;
+  background-color: #1e0010;
 }
 .language-coq .highlight .err {
   background-color: transparent;
@@ -766,6 +766,8 @@ pre code {
   width: auto;
   white-space: pre;
   word-wrap: normal;
+  background: #F5F5DC;
+  color: #000000;
 }
 code,
 kbd,
