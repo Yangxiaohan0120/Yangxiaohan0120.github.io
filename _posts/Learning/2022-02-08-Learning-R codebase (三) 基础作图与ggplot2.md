@@ -9,8 +9,8 @@ category: Learning
 catalog: true
 tags:
     - R codebase
-    - ggplot2
 ---
+
 > 段首语
 
 此系列文章用来做R语言的学习，以及对于使用R语言进行数据处理和作图的代码汇总，方便大家随时进行查找、使用。
@@ -18,3 +18,40 @@ tags:
 上一篇：[R codebase (二) 数据转换](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(二)-数据转换)
 
 下一篇：[R codebase (三) 基础作图与ggplot2](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(三)-基础作图与ggplot2)
+
+
+## 一、base R 基础作图
+
+### 图形创建
+
+#### 1.图形的创建
+
+#### 2.添加线条
+
+#### 3.增加绘图窗口
+
+#### 4.增加一条曲线
+
+* 多项式回归
+
+#### 5.添加点
+
+#### 6.添加图例
+
+#### 7.添加文字
+
+#### 8.精确定位
+
+#### 9.图形保存
+
+### 图形定制
+
+#### 1.字符大小
+
+#### 2.坐标轴范围
+
+#### 3.
+
+> 持续更新 。。。
+
+
