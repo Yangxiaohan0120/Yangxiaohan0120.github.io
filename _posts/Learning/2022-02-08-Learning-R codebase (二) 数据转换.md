@@ -40,7 +40,7 @@ read_*(file, col_names = TRUE, col_types = NULL, locale = default_locale(), na =
 
 分号分隔：read_csv2("file2.csv")
 
-任意分隔符：read_delim("file.txt", delim = "'|'")
+任意分隔符：read_delim("file.txt", delim = "\|")
 
 任意宽度的空格分隔：read_fwf("file.fwf", col_positions = c(1, 3, 5))
 
