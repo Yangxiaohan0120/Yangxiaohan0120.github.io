@@ -17,7 +17,7 @@ tags:
 
 上一篇：[R codebase (二) 数据转换](https://yangxiaohan0120.github.io/learning/2022/02/08/Learning-R-codebase-(%E4%BA%8C)-%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/)
 
-下一篇：[R codebase (四) 基本数据分析](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(四)-基本数据分析)
+下一篇：[R codebase (四) 基本数据分析](https://yangxiaohan0120.github.io/learning/2022/02/10/Learning-R-codebase-(%E5%9B%9B)-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/)
 
 
 ## 一、base R 基础作图
