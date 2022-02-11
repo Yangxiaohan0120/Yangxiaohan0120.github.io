@@ -1309,9 +1309,7 @@ e + stat_unique()
 
 * 组成结构
 
-<scale>_<aesthetic to adjust>_<prepackaged scale to use>(
-    values,limits,breaks,name,labels
-)
+> scale_aesthetic to adjust_prepackaged scale to use(values,limits,breaks,name,labels)
 
 
 ```r

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/Learning/2022-02-08-Learning-R codebase (二) 数据转换.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/Learning/2022-02-08-Learning-R codebase (二) 数据转换.md" afterDir="false" />
-    </list>
+    <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,14 +97,7 @@
       <workItem from="1644326496293" duration="1370000" />
       <workItem from="1644469427993" duration="135000" />
       <workItem from="1644469571502" duration="894000" />
-      <workItem from="1644544217141" duration="3679000" />
-    </task>
-    <task id="LOCAL-00007" summary="update">
-      <created>1644201274618</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1644201274618</updated>
+      <workItem from="1644544217141" duration="3901000" />
     </task>
     <task id="LOCAL-00008" summary="update">
       <created>1644201377901</created>
@@ -444,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644569224085</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="update">
+      <created>1644569254262</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1644569254262</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
