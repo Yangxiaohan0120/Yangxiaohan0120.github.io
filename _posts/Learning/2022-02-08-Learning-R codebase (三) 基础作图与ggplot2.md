@@ -38,7 +38,7 @@ data(VADeaths)
 hist(VADeaths,breaks=10, col=brewer.pal(3,"Set3"),main="Set3 3 colors")
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 * 线性图 line chart
 
@@ -47,7 +47,7 @@ hist(VADeaths,breaks=10, col=brewer.pal(3,"Set3"),main="Set3 3 colors")
 plot(AirPassengers,type="l")
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
 
 * 柱状图 bar chart
 
@@ -56,13 +56,13 @@ plot(AirPassengers,type="l")
 barplot(iris$Petal.Length) #Creating simple Bar Graph 
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
 ```r
 barplot(table(iris$Species,iris$Sepal.Length),col = brewer.pal(3,"Set1"))
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-4-2.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-4-2.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
 
 * 盒形图 boxplot
 
@@ -72,13 +72,13 @@ data(iris)
 boxplot(iris$Sepal.Length,col="red")
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 ```r
 boxplot(iris$Sepal.Length~iris$Species,col=topo.colors(3,alpha = 0.8))
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-5-2.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-5-2.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 * 散点图
 
@@ -87,19 +87,19 @@ boxplot(iris$Sepal.Length~iris$Species,col=topo.colors(3,alpha = 0.8))
 plot(x=iris$Petal.Length) 
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
 ```r
 plot(x=iris$Petal.Length,y=iris$Species)
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-6-2.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-6-2.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
 ```r
 plot(iris,col=brewer.pal(3,"Set1"))
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-6-3.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-6-3.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
 * 六边形密度图 Hexbin Binning
 
@@ -112,7 +112,7 @@ a=hexbin(diamonds$price,diamonds$carat,xbins=40)
 plot(a)
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-7-1.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-7-1.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" />
 
 ```r
 rf <- colorRampPalette(rev(brewer.pal(40,'Set3')))
@@ -121,7 +121,7 @@ rf <- colorRampPalette(rev(brewer.pal(40,'Set3')))
 hexbinplot(diamonds$price~diamonds$carat, data=diamonds, colramp=rf)
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-7-2.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-7-2.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" />
 
 *马赛克图（Mosaic Plot），也叫做不等宽柱状图(Marimekko Chart)
 
@@ -131,7 +131,7 @@ data(HairEyeColor)
 mosaicplot(HairEyeColor)
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;" />
 
 * 热图
 
@@ -155,14 +155,12 @@ head(mtcars)
 heatmap(as.matrix(mtcars))
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-9-1.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-9-1.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;" />
 * 地图 Map
 
 ```r
 ## devtools::install_github("rstudio/leaflet")
 library(magrittr) 
-## Warning: package 'magrittr' was built under R version
-## 4.0.5
 library(leaflet)
 m <- leaflet() %>% 
   addTiles() %>% # Add default OpenStreetMap map tiles 
@@ -176,21 +174,28 @@ m
 ```r
 data(iris, package="datasets")
 library(car)
-## Loading required package: carData
 # scatter3d(Petal.Width~Petal.Length+Sepal.Length|Species, data=iris, fit="linear",residuals=TRUE, parallel=FALSE, bg="black", axis.scales=TRUE, grid=TRUE, ellipsoid=FALSE)
 
 library(lattice)
 attach(iris)# 3d scatterplot by factor level
+## The following objects are masked from iris (pos = 4):
+## 
+##     Petal.Length, Petal.Width, Sepal.Length,
+##     Sepal.Width, Species
+## The following objects are masked from iris (pos = 6):
+## 
+##     Petal.Length, Petal.Width, Sepal.Length,
+##     Sepal.Width, Species
   cloud(Sepal.Length~Sepal.Width*Petal.Length|Species, main="3D Scatterplot by Species")
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-11-1.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-11-1.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" style="display: block; margin: auto;" />
 
 ```r
   xyplot(Sepal.Width ~ Sepal.Length, iris, groups = iris$Species, pch= 20)
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-11-2.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-11-2.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" style="display: block; margin: auto;" />
 * 相关性图 Correlogram (GUIs)
 
 ```r
@@ -206,15 +211,10 @@ cor(iris[1:4])
 ## Petal.Length   0.9628654
 ## Petal.Width    1.0000000
 library(corrgram)
-## 
-## Attaching package: 'corrgram'
-## The following object is masked from 'package:lattice':
-## 
-##     panel.fill
 corrgram(iris)
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-12-1.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-12-1.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" style="display: block; margin: auto;" />
 
 ### 图形定制
 
@@ -260,7 +260,7 @@ drugA <- c(16,20,28,40,60)
 plot(dose,drugA,type = "b",lty=3,lwd=3,pch=15,cex=2)
 ```
 
-<img src="https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" style="display: block; margin: auto;" />
 
 #### 3.颜色
 
@@ -668,6 +668,7 @@ last_plot() ## 显示最后一张图
 
 
 ```r
+
 a <- ggplot(economics,aes(date,unemploy))
 b <- ggplot(seals,aes(x=long,y=lat))
 head(economics)
@@ -681,15 +682,15 @@ head(economics)
 ## 5 1967-11-01  517. 199498    12.8     4.7     3066
 ## 6 1967-12-01  525. 199657    11.8     4.8     3018
 head(seals)
-## # A tibble: 6 × 4
-##     lat  long delta_long delta_lat
-##   <dbl> <dbl>      <dbl>     <dbl>
-## 1  29.7 -173.     -0.915    0.143 
-## 2  30.7 -173.     -0.867    0.128 
-## 3  31.7 -173.     -0.819    0.113 
-## 4  32.7 -173.     -0.771    0.0980
-## 5  33.7 -173.     -0.723    0.0828
-## 6  34.7 -173.     -0.674    0.0675
+## # A tibble: 6 × 5
+##     lat  long delta_long delta_lat     z
+##   <dbl> <dbl>      <dbl>     <dbl> <dbl>
+## 1  29.7 -173.     -0.915    0.143  0.926
+## 2  30.7 -173.     -0.867    0.128  0.876
+## 3  31.7 -173.     -0.819    0.113  0.827
+## 4  32.7 -173.     -0.771    0.0980 0.777
+## 5  33.7 -173.     -0.723    0.0828 0.727
+## 6  34.7 -173.     -0.674    0.0675 0.678
 ## 空白
 a + geom_blank()
 ```
@@ -701,12 +702,15 @@ a + geom_blank()
 #### 参数：x,xend,y,yend,alpha,angle,color,curvature,linetype,size
 b + geom_curve(aes(yend = lat + 1, xend=long+1,curvature=z))
 ## Warning: Ignoring unknown aesthetics: curvature
-## Error in `check_aesthetics()`:
-## ! Aesthetics must be either length 1 or the same as the data (1155): curvature
-b + geom_curve(aes(x =4.1,y = 7,yend =3.46,xend = 3.6),curvature=0.2)
 ```
 
 ![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-2.png)
+
+```r
+b + geom_curve(aes(x =4.1,y = 7,yend =3.46,xend = 3.6),curvature=0.2)
+```
+
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-3.png)
 
 ```r
 ## 路径
@@ -714,7 +718,7 @@ b + geom_curve(aes(x =4.1,y = 7,yend =3.46,xend = 3.6),curvature=0.2)
 a + geom_path(lineend="butt",linejoin = "round",linemitre = 1)
 ```
 
-![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-3.png)
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-4.png)
 
 ```r
 ## 多边形
@@ -722,7 +726,7 @@ a + geom_path(lineend="butt",linejoin = "round",linemitre = 1)
 a + geom_polygon(aes(group = psavert))
 ```
 
-![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-4.png)
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-5.png)
 
 ```r
 ## 长方形
@@ -730,7 +734,7 @@ a + geom_polygon(aes(group = psavert))
 b + geom_rect(aes(xmin = long, ymin=lat, xmax= long + 1, ymax = lat + 1)) 
 ```
 
-![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-5.png)
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-6.png)
 
 ```r
 ## 丝带
@@ -738,7 +742,7 @@ b + geom_rect(aes(xmin = long, ymin=lat, xmax= long + 1, ymax = lat + 1))
 a + geom_ribbon(aes(ymin=unemploy - 900, ymax=unemploy + 900))
 ```
 
-![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-6.png)
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-7.png)
 
 #### 2.线条图
 
@@ -1089,24 +1093,618 @@ l + geom_tile(aes(fill = z))
 ```
 
 ![plot of chunk unnamed-chunk-37](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-37-3.png)
-### 分组
 
-### 刻面
+### 统计（stats）
+<GGPLOT> + <STATFUNCTION>(aes(<GEOMMAPPING> = <VARIABLE>),geom = <GEOM_FUNCTION>)
+i + stat_density2d(aes(fill = level),geom = "polygon")
 
-### 添加光滑曲线
 
-### 外观修改
+```r
+##数据准备
+c <- ggplot(mpg, aes(hwy))
+e <- ggplot(mpg, aes(cty, hwy))
+seals$z <- with(seals, sqrt(delta_long^2 + delta_lat^2))
+l <- ggplot(seals, aes(long, lat))
+f <- ggplot(mpg, aes(class, hwy))
+h <- ggplot(diamonds, aes(carat, price))
+```
 
-#### 1.坐标轴
+* 统计落在x(连续)区间上，点的个数
 
-#### 2.图例
+```r
+#### x, y | ..count.., ..ncount.., ..density.., ..ndensity..
+c + stat_bin(binwidth = 1, origin = 10)
+```
 
-#### 3.标尺
+![plot of chunk unnamed-chunk-39](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-39-1.png)
 
-#### 4.主题
+* 统计落在x(离散)位置上，点的个数
 
-#### 5.多重图
+```r
+#### x, y, | ..count.., ..prop..
+c + stat_count(width = 1) 
+```
 
-### 图形保存
+![plot of chunk unnamed-chunk-40](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-40-1.png)
+
+* x(连续)核密度估计，可以看作是直方图的平滑版本
+
+```r
+#### x, y, | ..count.., ..density.., ..scaled..
+c + stat_density(adjust = 1, kernel = "gaussian") 
+```
+
+![plot of chunk unnamed-chunk-41](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-41-1.png)
+
+* 统计落在x和y(长方形)区域上点的个数
+
+```r
+####x, y, fill | ..count.., ..density..
+e + stat_bin_2d(bins = 30, drop = T)
+```
+
+![plot of chunk unnamed-chunk-42](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-42-1.png)
+
+* 统计落在六边形区域上点的个数，stat_bin2d()的六边形版本
+
+```r
+#### x, y, fill | ..count.., ..density.. 
+e + stat_bin_hex(bins=30) 
+```
+
+![plot of chunk unnamed-chunk-43](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-43-1.png)
+
+* 二维核密度估计，二维版本的stat_density()
+
+```r
+#### x, y, color, size | ..level..
+e + stat_density_2d(contour = TRUE, n = 100)
+```
+
+![plot of chunk unnamed-chunk-44](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-44-1.png)
+
+* 假定数据服从多元分布，计算椭圆图形需要的参数
+
+```r
+e + stat_ellipse(level = 0.95, segments = 51, type = "t")
+```
+
+![plot of chunk unnamed-chunk-45](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-45-1.png)
+
+* 等高线、等高面，需要提供x,y,z映射
+
+```r
+#### x, y, z, order | ..level..
+l + stat_contour(aes(z = z)) 
+```
+
+![plot of chunk unnamed-chunk-46](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-46-1.png)
+
+* 落在x和y(六边形)区域上, summary on z
+
+```r
+#### x, y, z, fill | ..value..
+l + stat_summary_hex(aes(z = z), bins = 30, fun = max)
+```
+
+![plot of chunk unnamed-chunk-47](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-47-1.png)
+
+* 落在x和y(长方形)区域上, summary on z
+
+```r
+#### x, y, z, fill | ..value..
+l + stat_summary_2d(aes(z = z), bins = 30, fun = mean)
+```
+
+![plot of chunk unnamed-chunk-48](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-48-1.png)
+
+* 计算连续变量的五个统计值 (the median, two hinges and two whiskers), 以及outlier
+
+```r
+#### x, y | ..lower.., ..middle.., ..upper.., ..width.. , ..ymin.., ..ymax..
+f + stat_boxplot(coef = 1.5) 
+```
+
+![plot of chunk unnamed-chunk-49](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-49-1.png)
+
+* 箱线图的密度图呈现
+
+```r
+#### x, y | ..density.., ..scaled.., ..count.., ..n.., ..violinwidth.., ..width..
+f + stat_ydensity(kernel = "gaussian", scale = "area") 
+```
+
+![plot of chunk unnamed-chunk-50](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-50-1.png)
+
+* 统计经验累积分布
+
+```r
+#### x, y | ..x.., ..y..
+e + stat_ecdf(n = 40) 
+```
+
+![plot of chunk unnamed-chunk-51](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-51-1.png)
+
+* 分位数回归
+
+```r
+#### x, y | ..quantile..
+e + stat_quantile(quantiles = c(0.1, 0.9), formula = y ~ log(x), method = "rq") 
+```
+
+![plot of chunk unnamed-chunk-52](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-52-1.png)
+
+* 根据x,y数据和拟合公式，计算每个点位置的拟合值以及标准误
+
+```r
+#### x, y | ..se.., ..x.., ..y.., ..ymin.., ..ymax..
+e + stat_smooth(method = "lm", formula = y ~ x, se=T, level=0.95) 
+```
+
+![plot of chunk unnamed-chunk-53](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-53-1.png)
+
+* 叠加自定义函数
+
+```r
+#### x | ..x.., ..y..
+x = runif(n = 100, min = -5, max = 5)
+ggplot() + stat_function(n = 99, fun = dnorm, args = list(mean = 0, sd = 0.5)) 
+```
+
+![plot of chunk unnamed-chunk-54](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-54-1.png)
+
+* 等值转换
+
+```r
+e + stat_identity(na.rm = TRUE) 
+```
+
+![plot of chunk unnamed-chunk-55](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-55-1.png)
+
+* qq 分位数图的统计
+
+```r
+#### sample, x, y | ..sample.., ..theoretical..
+ggplot() + stat_qq(aes(sample=1:100), dist = qt, dparam=list(df=5)) 
+```
+
+![plot of chunk unnamed-chunk-56](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-56-1.png)
+
+* 统计落在x(连续), y(连续)位置上，点的个数
+
+```r
+#### x, y, size | ..n.., ..prop..
+e + stat_sum() 
+```
+
+![plot of chunk unnamed-chunk-57](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-57-1.png)
+
+* 每一个x位置上, summary on y
+
+```r
+e + stat_summary(fun.data = "mean_cl_boot") 
+```
+
+![plot of chunk unnamed-chunk-58](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-58-1.png)
+
+* 在落入x区间位置上的y，设定函数（也可以调整方向，对落入y区间位置的每个x，设定函数）
+
+```r
+h + stat_summary_bin(fun.y = "mean", geom = "bar")
+```
+
+![plot of chunk unnamed-chunk-59](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-59-1.png)
+
+* 移除重复值
+
+```r
+e + stat_unique()
+```
+
+![plot of chunk unnamed-chunk-60](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-60-1.png)
+
+### 范围（scales）
+
+* 组成结构
+
+<scale>_<aesthetic to adjust>_<prepackaged scale to use>(
+    values,limits,breaks,name,labels
+)
+
+
+```r
+d <- ggplot(mpg, aes(fl))
+n <- d + geom_bar(aes(fill = fl))
+n + scale_fill_manual( values = c("skyblue", "royalblue", "blue", "navy"), limits = c("d", "e", "p", "r"), breaks =c("d", "e", "p","r"), name = "fuel", labels = c("D", "E", "P", "R"))
+```
+
+![plot of chunk unnamed-chunk-61](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-61-1.png)
+* 基本类型
+
+|形式|描述|
+|:---|:---|
+|scale_&_continous()|连续型变量|
+|scale_&_discrete()|离散型变量|
+|scale_&_identity()|单独变量|
+|scale_&_manual()|使用指定值|
+|scale_&_date()|数据转换为时间|
+|scale_&_datetime()|数据转换为时间|
+
+* x,y 的位置变换
+
+|形式|描述|
+|:---|:---|
+|scale_x_log10()|取log10|
+|scale_x_reverse()|取倒数|
+|scale_x_sqrt()|取开方|
+
+* 颜色转换
+
+
+```r
+#### 离散
+n <- d + geom_bar(aes(fill = fl)) 
+## 色彩渐变
+n + scale_fill_brewer(palette = "Blues") 
+```
+
+![plot of chunk unnamed-chunk-62](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-62-1.png)
+
+```r
+#### For palette choices: RColorBrewer::display.brewer.all() 
+## 灰度
+n + scale_fill_grey(start = 0.2, end = 0.8, na.value = "red")
+```
+
+![plot of chunk unnamed-chunk-62](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-62-2.png)
+
+```r
+
+#### 连续
+##
+o <- c + geom_dotplot(aes(fill = ..x..))
+o + scale_fill_distiller(palette = "Blues") 
+## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
+```
+
+![plot of chunk unnamed-chunk-62](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-62-3.png)
+
+```r
+o + scale_fill_gradient(low="red", high="yellow") 
+## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
+```
+
+![plot of chunk unnamed-chunk-62](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-62-4.png)
+
+```r
+o + scale_fill_gradient2(low="red", high="blue", mid = "white", midpoint = 25) 
+## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
+```
+
+![plot of chunk unnamed-chunk-62](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-62-5.png)
+
+```r
+o + scale_fill_gradientn(colours=topo.colors(6)) 
+## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
+```
+
+![plot of chunk unnamed-chunk-62](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-62-6.png)
+
+```r
+#### Also: rainbow(), heat.colors(), terrain.colors(), cm.colors(), RColorBrewer::brewer.pal()
+```
+
+* 图形与大小
+
+
+```r
+p <- e + geom_point(aes(shape = fl, size = cyl)) 
+p + scale_shape() + scale_size() 
+```
+
+![plot of chunk unnamed-chunk-63](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-63-1.png)
+
+```r
+p + scale_shape_manual(values = c(3:7))
+```
+
+![plot of chunk unnamed-chunk-63](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-63-2.png)
+
+```r
+p + scale_radius(range = c(1,6)) 
+```
+
+![plot of chunk unnamed-chunk-63](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-63-3.png)
+
+```r
+p + scale_size_area(max_size = 6)
+```
+
+![plot of chunk unnamed-chunk-63](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-63-4.png)
+
+### 坐标轴系统（coordinate）
+
+
+```r
+r <- d + geom_bar()
+## 默认笛卡尔坐标系统
+r + coord_cartesian(xlim = c(0, 5)) 
+```
+
+![plot of chunk unnamed-chunk-64](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-64-1.png)
+
+```r
+## y,x 比例扩缩
+r + coord_fixed(ratio = 1/2) 
+```
+
+![plot of chunk unnamed-chunk-64](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-64-2.png)
+
+```r
+## y,x 交换
+r + coord_flip()
+```
+
+![plot of chunk unnamed-chunk-64](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-64-3.png)
+
+```r
+## 极坐标
+#### theta, start, direction Polar coordinates 
+r + coord_polar(theta = "x", direction=1)
+```
+
+![plot of chunk unnamed-chunk-64](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-64-4.png)
+
+```r
+## 函数式转换
+#### x, y, limx, limy
+r + coord_trans(y = "sqrt")
+```
+
+![plot of chunk unnamed-chunk-64](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-64-5.png)
+
+```r
+## 地图系统
+#### projection, orienztation, xlim, ylim Map projections from the mapproj package (mercator (default), azequalarea, lagrange, etc.)
+π + coord_quickmap() 
+## Error in eval(expr, envir, enclos): object '\u03c0' not found
+π + coord_map(projection = "ortho", orientation=c(41, -74, 0))
+## Error in eval(expr, envir, enclos): object '\u03c0' not found
+```
+
+### 位置（position）
+
+
+```r
+s <- ggplot(mpg, aes(fl, fill = drv)) 
+## 紧靠
+s + geom_bar(position = "dodge")
+```
+
+![plot of chunk unnamed-chunk-65](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-65-1.png)
+
+```r
+## 百分比堆叠
+s + geom_bar(position = "fill")
+```
+
+![plot of chunk unnamed-chunk-65](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-65-2.png)
+
+```r
+## 绝对值堆叠
+s + geom_bar(position = "stack")
+```
+
+![plot of chunk unnamed-chunk-65](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-65-3.png)
+
+```r
+## 相隔位置
+s + geom_bar(position = position_dodge(width = 1))
+```
+
+![plot of chunk unnamed-chunk-65](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-65-4.png)
+
+```r
+## 随机抖动
+e + geom_point(position = "jitter")
+```
+
+![plot of chunk unnamed-chunk-65](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-65-5.png)
+
+```r
+## 
+e + geom_label(aes(label = cty),position = "Nudge")
+```
+
+![plot of chunk unnamed-chunk-65](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-65-6.png)
+
+### 分组（facets）
+
+
+```r
+t <- ggplot(mpg, aes(cty, hwy)) + geom_point()
+## 以列分组
+t + facet_grid(cols = vars(fl)) 
+```
+
+![plot of chunk unnamed-chunk-66](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-66-1.png)
+
+```r
+## 以行分组
+t + facet_grid(rows = vars(year))
+```
+
+![plot of chunk unnamed-chunk-66](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-66-2.png)
+
+```r
+## 以格子分组
+t + facet_grid(rows = vars(year), cols = vars(fl))
+```
+
+![plot of chunk unnamed-chunk-66](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-66-3.png)
+
+```r
+## 以某个变量分组
+t + facet_wrap(vars(fl))
+```
+
+![plot of chunk unnamed-chunk-66](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-66-4.png)
+
+设置“free”变量来更改x,y轴的范围
+
+
+```r
+t + facet_grid(rows = vars(drv), cols = vars(fl), scales = "free")
+```
+
+![plot of chunk unnamed-chunk-67](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-67-1.png)
+
+设置“labeller”变量来更改x,y轴的标签
+
+
+```r
+t + facet_grid(cols = vars(fl), labeller = label_both)
+```
+
+![plot of chunk unnamed-chunk-68](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-68-1.png)
+
+```r
+t + facet_grid(rows = vars(fl), labeller = label_bquote(alpha ^ .(fl)))
+```
+
+![plot of chunk unnamed-chunk-68](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-68-2.png)
+
+### 主题（Theme）
+
+
+```r
+r + theme_bw()
+```
+
+![plot of chunk unnamed-chunk-69](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-69-1.png)
+
+```r
+r + theme_gray()
+```
+
+![plot of chunk unnamed-chunk-69](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-69-2.png)
+
+```r
+r + theme_dark()
+```
+
+![plot of chunk unnamed-chunk-69](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-69-3.png)
+
+```r
+r + theme_classic()
+```
+
+![plot of chunk unnamed-chunk-69](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-69-4.png)
+
+```r
+r + theme_light()
+```
+
+![plot of chunk unnamed-chunk-69](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-69-5.png)
+
+```r
+r + theme_linedraw()
+```
+
+![plot of chunk unnamed-chunk-69](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-69-6.png)
+
+```r
+r + theme_minimal()
+```
+
+![plot of chunk unnamed-chunk-69](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-69-7.png)
+
+```r
+r + theme_void()
+```
+
+![plot of chunk unnamed-chunk-69](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-69-8.png)
+
+### 标记（label）
+
+
+```r
+t + labs( x = "New x axis label", y = "New y axis label",
+          title ="Add a title above the plot", 
+          subtitle = "Add a subtitle below title",
+          caption = "Add a caption below plot", 
+          labels = "New legend title")
+```
+
+![plot of chunk unnamed-chunk-70](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-70-1.png)
+
+```r
+
+t + annotate(geom = "text", x = 8, y = 9, label = "A")
+```
+
+![plot of chunk unnamed-chunk-70](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-70-2.png)
+
+### 图例
+
+
+```r
+### Place legend at "bottom", "top", "left", or "right"
+n + theme(legend.position = "bottom")
+```
+
+![plot of chunk unnamed-chunk-71](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-71-1.png)
+
+```r
+### Set legend type for each aesthetic: colorbar, legend, or none (no legend)
+n + guides(fill = "none")
+```
+
+![plot of chunk unnamed-chunk-71](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-71-2.png)
+
+```r
+### 使用scale做图例的标题和标记
+n + scale_fill_discrete(name = "Title", labels = c("A", "B", "C", "D", "E"))
+```
+
+![plot of chunk unnamed-chunk-71](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-71-3.png)
+### 放大（Zoom）
+
+
+```r
+### 不剪切
+t + coord_cartesian(xlim = c(0, 100), ylim = c(10, 20))
+```
+
+![plot of chunk unnamed-chunk-72](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-72-1.png)
+
+```r
+### 剪切
+t + xlim(0, 100) + ylim(10, 20)
+```
+
+![plot of chunk unnamed-chunk-72](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-72-2.png)
+
+```r
+t + scale_x_continuous(limits = c(0, 100)) + scale_y_continuous(limits = c(0, 100))
+```
+
+![plot of chunk unnamed-chunk-72](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-72-3.png)
+
+### 组合
+
+
+```r
+data("Salaries",package = "car")
+p1 <- ggplot(data = Salaries,aes(x = rank)) + geom_bar()
+p2 <- ggplot(data = Salaries,aes(x = sex)) + geom_bar()
+p3 <- ggplot(data = Salaries,aes(x = yrs.since.phd,y=salary)) + geom_point()
+
+library(gridExtra)
+grid.arrange(p1,p2,p3,ncol=3)
+```
+
+![plot of chunk unnamed-chunk-73](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-73-1.png)
+
 
 > 持续更新 。。。

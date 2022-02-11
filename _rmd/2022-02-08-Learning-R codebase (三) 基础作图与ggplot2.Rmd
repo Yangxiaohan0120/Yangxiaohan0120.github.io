@@ -424,6 +424,7 @@ last_plot() ## 显示最后一张图
 #### 1.基础图块
 
 ```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+
 a <- ggplot(economics,aes(date,unemploy))
 b <- ggplot(seals,aes(x=long,y=lat))
 head(economics)
@@ -615,24 +616,335 @@ l + geom_raster(aes(fill = z), hjust=0.5, vjust=0.5, interpolate=FALSE)
 ####参数：x, y, alpha, color, fill, linetype, size, width
 l + geom_tile(aes(fill = z))
 ```
-### 分组
 
-### 刻面
+### 统计（stats）
+<GGPLOT> + <STATFUNCTION>(aes(<GEOMMAPPING> = <VARIABLE>),geom = <GEOM_FUNCTION>)
+i + stat_density2d(aes(fill = level),geom = "polygon")
 
-### 添加光滑曲线
+```{r,eval=T,collapse=T}
+##数据准备
+c <- ggplot(mpg, aes(hwy))
+e <- ggplot(mpg, aes(cty, hwy))
+seals$z <- with(seals, sqrt(delta_long^2 + delta_lat^2))
+l <- ggplot(seals, aes(long, lat))
+f <- ggplot(mpg, aes(class, hwy))
+h <- ggplot(diamonds, aes(carat, price))
+```
 
-### 外观修改
+* 统计落在x(连续)区间上，点的个数
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y | ..count.., ..ncount.., ..density.., ..ndensity..
+c + stat_bin(binwidth = 1, origin = 10)
+```
 
-#### 1.坐标轴
+* 统计落在x(离散)位置上，点的个数
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y, | ..count.., ..prop..
+c + stat_count(width = 1) 
+```
 
-#### 2.图例
+* x(连续)核密度估计，可以看作是直方图的平滑版本
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y, | ..count.., ..density.., ..scaled..
+c + stat_density(adjust = 1, kernel = "gaussian") 
+```
 
-#### 3.标尺
+* 统计落在x和y(长方形)区域上点的个数
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+####x, y, fill | ..count.., ..density..
+e + stat_bin_2d(bins = 30, drop = T)
+```
 
-#### 4.主题
+* 统计落在六边形区域上点的个数，stat_bin2d()的六边形版本
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y, fill | ..count.., ..density.. 
+e + stat_bin_hex(bins=30) 
+```
 
-#### 5.多重图
+* 二维核密度估计，二维版本的stat_density()
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y, color, size | ..level..
+e + stat_density_2d(contour = TRUE, n = 100)
+```
 
-### 图形保存
+* 假定数据服从多元分布，计算椭圆图形需要的参数
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+e + stat_ellipse(level = 0.95, segments = 51, type = "t")
+```
+
+* 等高线、等高面，需要提供x,y,z映射
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y, z, order | ..level..
+l + stat_contour(aes(z = z)) 
+```
+
+* 落在x和y(六边形)区域上, summary on z
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y, z, fill | ..value..
+l + stat_summary_hex(aes(z = z), bins = 30, fun = max)
+```
+
+* 落在x和y(长方形)区域上, summary on z
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y, z, fill | ..value..
+l + stat_summary_2d(aes(z = z), bins = 30, fun = mean)
+```
+
+* 计算连续变量的五个统计值 (the median, two hinges and two whiskers), 以及outlier
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y | ..lower.., ..middle.., ..upper.., ..width.. , ..ymin.., ..ymax..
+f + stat_boxplot(coef = 1.5) 
+```
+
+* 箱线图的密度图呈现
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y | ..density.., ..scaled.., ..count.., ..n.., ..violinwidth.., ..width..
+f + stat_ydensity(kernel = "gaussian", scale = "area") 
+```
+
+* 统计经验累积分布
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y | ..x.., ..y..
+e + stat_ecdf(n = 40) 
+```
+
+* 分位数回归
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y | ..quantile..
+e + stat_quantile(quantiles = c(0.1, 0.9), formula = y ~ log(x), method = "rq") 
+```
+
+* 根据x,y数据和拟合公式，计算每个点位置的拟合值以及标准误
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y | ..se.., ..x.., ..y.., ..ymin.., ..ymax..
+e + stat_smooth(method = "lm", formula = y ~ x, se=T, level=0.95) 
+```
+
+* 叠加自定义函数
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x | ..x.., ..y..
+x = runif(n = 100, min = -5, max = 5)
+ggplot() + stat_function(n = 99, fun = dnorm, args = list(mean = 0, sd = 0.5)) 
+```
+
+* 等值转换
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+e + stat_identity(na.rm = TRUE) 
+```
+
+* qq 分位数图的统计
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### sample, x, y | ..sample.., ..theoretical..
+ggplot() + stat_qq(aes(sample=1:100), dist = qt, dparam=list(df=5)) 
+```
+
+* 统计落在x(连续), y(连续)位置上，点的个数
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### x, y, size | ..n.., ..prop..
+e + stat_sum() 
+```
+
+* 每一个x位置上, summary on y
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+e + stat_summary(fun.data = "mean_cl_boot") 
+```
+
+* 在落入x区间位置上的y，设定函数（也可以调整方向，对落入y区间位置的每个x，设定函数）
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+h + stat_summary_bin(fun.y = "mean", geom = "bar")
+```
+
+* 移除重复值
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+e + stat_unique()
+```
+
+### 范围（scales）
+
+* 组成结构
+
+<scale>_<aesthetic to adjust>_<prepackaged scale to use>(
+    values,limits,breaks,name,labels
+)
+
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+d <- ggplot(mpg, aes(fl))
+n <- d + geom_bar(aes(fill = fl))
+n + scale_fill_manual( values = c("skyblue", "royalblue", "blue", "navy"), limits = c("d", "e", "p", "r"), breaks =c("d", "e", "p","r"), name = "fuel", labels = c("D", "E", "P", "R"))
+```
+* 基本类型
+
+|形式|描述|
+|:---|:---|
+|scale_&_continous()|连续型变量|
+|scale_&_discrete()|离散型变量|
+|scale_&_identity()|单独变量|
+|scale_&_manual()|使用指定值|
+|scale_&_date()|数据转换为时间|
+|scale_&_datetime()|数据转换为时间|
+
+* x,y 的位置变换
+
+|形式|描述|
+|:---|:---|
+|scale_x_log10()|取log10|
+|scale_x_reverse()|取倒数|
+|scale_x_sqrt()|取开方|
+
+* 颜色转换
+
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+#### 离散
+n <- d + geom_bar(aes(fill = fl)) 
+## 色彩渐变
+n + scale_fill_brewer(palette = "Blues") 
+#### For palette choices: RColorBrewer::display.brewer.all() 
+## 灰度
+n + scale_fill_grey(start = 0.2, end = 0.8, na.value = "red")
+
+#### 连续
+##
+o <- c + geom_dotplot(aes(fill = ..x..))
+o + scale_fill_distiller(palette = "Blues") 
+o + scale_fill_gradient(low="red", high="yellow") 
+o + scale_fill_gradient2(low="red", high="blue", mid = "white", midpoint = 25) 
+o + scale_fill_gradientn(colours=topo.colors(6)) 
+#### Also: rainbow(), heat.colors(), terrain.colors(), cm.colors(), RColorBrewer::brewer.pal()
+```
+
+* 图形与大小
+
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+p <- e + geom_point(aes(shape = fl, size = cyl)) 
+p + scale_shape() + scale_size() 
+p + scale_shape_manual(values = c(3:7))
+p + scale_radius(range = c(1,6)) 
+p + scale_size_area(max_size = 6)
+```
+
+### 坐标轴系统（coordinate）
+
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+r <- d + geom_bar()
+## 默认笛卡尔坐标系统
+r + coord_cartesian(xlim = c(0, 5)) 
+## y,x 比例扩缩
+r + coord_fixed(ratio = 1/2) 
+## y,x 交换
+r + coord_flip()
+## 极坐标
+#### theta, start, direction Polar coordinates 
+r + coord_polar(theta = "x", direction=1)
+## 函数式转换
+#### x, y, limx, limy
+r + coord_trans(y = "sqrt")
+## 地图系统
+#### projection, orienztation, xlim, ylim Map projections from the mapproj package (mercator (default), azequalarea, lagrange, etc.)
+π + coord_quickmap() 
+π + coord_map(projection = "ortho", orientation=c(41, -74, 0))
+```
+
+### 位置（position）
+
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+s <- ggplot(mpg, aes(fl, fill = drv)) 
+## 紧靠
+s + geom_bar(position = "dodge")
+## 百分比堆叠
+s + geom_bar(position = "fill")
+## 绝对值堆叠
+s + geom_bar(position = "stack")
+## 相隔位置
+s + geom_bar(position = position_dodge(width = 1))
+## 随机抖动
+e + geom_point(position = "jitter")
+## 
+e + geom_label(aes(label = cty),position = "Nudge")
+```
+
+### 分组（facets）
+
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3,warning=F}
+t <- ggplot(mpg, aes(cty, hwy)) + geom_point()
+## 以列分组
+t + facet_grid(cols = vars(fl)) 
+## 以行分组
+t + facet_grid(rows = vars(year))
+## 以格子分组
+t + facet_grid(rows = vars(year), cols = vars(fl))
+## 以某个变量分组
+t + facet_wrap(vars(fl))
+```
+
+设置“free”变量来更改x,y轴的范围
+
+```{r,eval=T,collapse=T,fig.height=5,fig.width=5,warning=F}
+t + facet_grid(rows = vars(drv), cols = vars(fl), scales = "free")
+```
+
+设置“labeller”变量来更改x,y轴的标签
+
+```{r,eval=T,collapse=T,fig.height=5,fig.width=5,warning=F}
+t + facet_grid(cols = vars(fl), labeller = label_both)
+t + facet_grid(rows = vars(fl), labeller = label_bquote(alpha ^ .(fl)))
+```
+
+### 主题（Theme）
+
+```{r,eval=T,collapse=T,fig.height=5,fig.width=5,warning=F}
+r + theme_bw()
+r + theme_gray()
+r + theme_dark()
+r + theme_classic()
+r + theme_light()
+r + theme_linedraw()
+r + theme_minimal()
+r + theme_void()
+```
+
+### 标记（label）
+
+```{r,eval=T,collapse=T,fig.height=5,fig.width=5,warning=F}
+t + labs( x = "New x axis label", y = "New y axis label",
+          title ="Add a title above the plot", 
+          subtitle = "Add a subtitle below title",
+          caption = "Add a caption below plot", 
+          labels = "New legend title")
+
+t + annotate(geom = "text", x = 8, y = 9, label = "A")
+```
+
+### 图例
+
+```{r,eval=T,collapse=T,fig.height=5,fig.width=5,warning=F}
+### Place legend at "bottom", "top", "left", or "right"
+n + theme(legend.position = "bottom")
+### Set legend type for each aesthetic: colorbar, legend, or none (no legend)
+n + guides(fill = "none")
+### 使用scale做图例的标题和标记
+n + scale_fill_discrete(name = "Title", labels = c("A", "B", "C", "D", "E"))
+```
+### 放大（Zoom）
+
+```{r,eval=T,collapse=T,fig.height=5,fig.width=5,warning=F}
+### 不剪切
+t + coord_cartesian(xlim = c(0, 100), ylim = c(10, 20))
+### 剪切
+t + xlim(0, 100) + ylim(10, 20)
+t + scale_x_continuous(limits = c(0, 100)) + scale_y_continuous(limits = c(0, 100))
+```
+
+### 组合
+
+```{r,eval=T,collapse=T,fig.height=5,fig.width=5,warning=F}
+data("Salaries",package = "car")
+p1 <- ggplot(data = Salaries,aes(x = rank)) + geom_bar()
+p2 <- ggplot(data = Salaries,aes(x = sex)) + geom_bar()
+p3 <- ggplot(data = Salaries,aes(x = yrs.since.phd,y=salary)) + geom_point()
+
+library(gridExtra)
+grid.arrange(p1,p2,p3,ncol=3)
+```
+
 
 > 持续更新 。。。
