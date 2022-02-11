@@ -4,34 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/figure/Rplot/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/Rplot/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/Rplot/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/Rplot/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/Rplot/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/Rplot/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/Rplot/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/Rplot/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/Rplot/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-13-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-15-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-18-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-19-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-20-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-21-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-24-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-25-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-26-1.png" afterDir="false" />
+    <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/_rmd/plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-27-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-27-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-27-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-28-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-28-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-28-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-28-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-28-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-28-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-29-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-29-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-29-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-29-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-29-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-30-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-30-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-30-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-30-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-30-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-30-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-30-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-31-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-31-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-31-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-31-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-31-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-31-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-31-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-32-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-32-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-32-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-32-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-33-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-33-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-33-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-33-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-34-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-34-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-34-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-35-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-35-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-35-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-35-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-36-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-37-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-37-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/figure/unnamed-chunk-37-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Storage/001shuaidi/02算法与数据结构/01巩固提升/02算法专题训练.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/../Storage/001shuaidi/02算法与数据结构/01巩固提升/02算法专题训练.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Yangxiaohan0120.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Yangxiaohan0120.github.io.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/Learning/2022-02-08-Learning-R codebase (三) 基础作图与ggplot2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/Learning/2022-02-08-Learning-R codebase (三) 基础作图与ggplot2.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (三) 基础作图与ggplot2.Rmd" beforeDir="false" afterPath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (三) 基础作图与ggplot2.Rmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (二) 数据转换.Rmd" beforeDir="false" afterPath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (二) 数据转换.Rmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (五) 高级数据分析.Rmd" beforeDir="false" afterPath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (五) 高级数据分析.Rmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (四) 基本数据分析.Rmd" beforeDir="false" afterPath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (四) 基本数据分析.Rmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R-codebase--三--基础作图与ggplot2.html" beforeDir="false" afterPath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R-codebase--三--基础作图与ggplot2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-22-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/figure/unnamed-chunk-22-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-23-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/figure/unnamed-chunk-23-1.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +129,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.scopes" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,7 +150,10 @@
       <workItem from="1644212249048" duration="5016000" />
       <workItem from="1644241023561" duration="2130000" />
       <workItem from="1644283265599" duration="6845000" />
-      <workItem from="1644326496293" duration="652000" />
+      <workItem from="1644326496293" duration="1370000" />
+      <workItem from="1644469427993" duration="135000" />
+      <workItem from="1644469571502" duration="894000" />
+      <workItem from="1644544217141" duration="787000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1638953720904</created>
@@ -417,7 +449,28 @@
       <option name="project" value="LOCAL" />
       <updated>1644321653396</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="third">
+      <created>1644376123651</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1644376123651</updated>
+    </task>
+    <task id="LOCAL-00044" summary="update">
+      <created>1644469644066</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1644469644066</updated>
+    </task>
+    <task id="LOCAL-00045" summary="update">
+      <created>1644469876642</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1644469876642</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,9 +478,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update" />
     <MESSAGE value="second" />
     <MESSAGE value="third" />
-    <option name="LAST_COMMIT_MESSAGE" value="third" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

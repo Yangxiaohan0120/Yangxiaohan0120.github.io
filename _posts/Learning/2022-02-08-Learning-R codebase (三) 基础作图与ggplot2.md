@@ -629,8 +629,466 @@ curve((x^2+1)^0.5,0,5)
 
 ## 二、ggplot2作图
 
+### ggplot2的基本语法
+
+ggplot2(data = <DATA>) + 
+    < GEOM_FUNCTION >( mapping = aes(< MAPPINGS >),stat=< STAT >,position = < POSITION >)+
+    <COORDINATE_FUNCTION>+
+    <FACET_FUNCTION>+
+    <SCALE_FUNCTION>+
+    <THEME_FUNCTION>
+    
+
+```r
+library(ggplot2)
+## 写法一
+ggplot(data = mpg,aes(x = cty,y = hwy)) + geom_point()
+```
+
+![plot of chunk unnamed-chunk-27](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-27-1.png)
+
+```r
+## 写法二
+qplot(x = cty,y = hwy,data = mpg,geom = "point")
+```
+
+![plot of chunk unnamed-chunk-27](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-27-2.png)
+
+```r
+## 保存
+ggsave("plot.png",width = 5,height = 5)
+last_plot() ## 显示最后一张图
+```
+
+![plot of chunk unnamed-chunk-27](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-27-3.png)
+
 ### 基本图类型
 
+#### 1.基础图块
+
+
+```r
+a <- ggplot(economics,aes(date,unemploy))
+b <- ggplot(seals,aes(x=long,y=lat))
+head(economics)
+## # A tibble: 6 × 6
+##   date         pce    pop psavert uempmed unemploy
+##   <date>     <dbl>  <dbl>   <dbl>   <dbl>    <dbl>
+## 1 1967-07-01  507. 198712    12.6     4.5     2944
+## 2 1967-08-01  510. 198911    12.6     4.7     2945
+## 3 1967-09-01  516. 199113    11.9     4.6     2958
+## 4 1967-10-01  512. 199311    12.9     4.9     3143
+## 5 1967-11-01  517. 199498    12.8     4.7     3066
+## 6 1967-12-01  525. 199657    11.8     4.8     3018
+head(seals)
+## # A tibble: 6 × 4
+##     lat  long delta_long delta_lat
+##   <dbl> <dbl>      <dbl>     <dbl>
+## 1  29.7 -173.     -0.915    0.143 
+## 2  30.7 -173.     -0.867    0.128 
+## 3  31.7 -173.     -0.819    0.113 
+## 4  32.7 -173.     -0.771    0.0980
+## 5  33.7 -173.     -0.723    0.0828
+## 6  34.7 -173.     -0.674    0.0675
+## 空白
+a + geom_blank()
+```
+
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-1.png)
+
+```r
+## 曲线
+#### 参数：x,xend,y,yend,alpha,angle,color,curvature,linetype,size
+b + geom_curve(aes(yend = lat + 1, xend=long+1,curvature=z))
+## Warning: Ignoring unknown aesthetics: curvature
+## Error in `check_aesthetics()`:
+## ! Aesthetics must be either length 1 or the same as the data (1155): curvature
+b + geom_curve(aes(x =4.1,y = 7,yend =3.46,xend = 3.6),curvature=0.2)
+```
+
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-2.png)
+
+```r
+## 路径
+#### 参数：x,y,alpha,color,group,linetype,size
+a + geom_path(lineend="butt",linejoin = "round",linemitre = 1)
+```
+
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-3.png)
+
+```r
+## 多边形
+#### 参数：x,y,alpha,color,fill,group,linetype,size
+a + geom_polygon(aes(group = psavert))
+```
+
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-4.png)
+
+```r
+## 长方形
+#### 参数：xmax, xmin, ymax, ymin, alpha, color, fill, linetype, size
+b + geom_rect(aes(xmin = long, ymin=lat, xmax= long + 1, ymax = lat + 1)) 
+```
+
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-5.png)
+
+```r
+## 丝带
+#### 参数：x, ymax, ymin, alpha, color, fill, group, linetype, size
+a + geom_ribbon(aes(ymin=unemploy - 900, ymax=unemploy + 900))
+```
+
+![plot of chunk unnamed-chunk-28](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-28-6.png)
+
+#### 2.线条图
+
+
+```r
+#### 参数：x, y, alpha, color, linetype, size
+## 任意线
+b + geom_abline(aes(intercept=0, slope=1))
+```
+
+![plot of chunk unnamed-chunk-29](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-29-1.png)
+
+```r
+## 水平线
+b + geom_hline(aes(yintercept = lat))
+```
+
+![plot of chunk unnamed-chunk-29](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-29-2.png)
+
+```r
+## 垂直线
+b + geom_vline(aes(xintercept = long))
+```
+
+![plot of chunk unnamed-chunk-29](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-29-3.png)
+
+```r
+## 分割线
+b + geom_segment(aes(yend=lat+1, xend=long+1)) 
+```
+
+![plot of chunk unnamed-chunk-29](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-29-4.png)
+
+```r
+## 条幅线
+a + geom_spoke(aes(x=1,y=1,angle = 1:574, radius = 0.2))
+```
+
+![plot of chunk unnamed-chunk-29](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-29-5.png)
+
+#### 3.单一变量
+
+
+```r
+c <- ggplot(mpg,aes(hwy))
+c2 <- ggplot(mpg)
+##### 连续型变量
+## 面积图
+#### 参数：x, y, alpha, color, fill, linetype, size
+c + geom_area(stat = "bin")
+## `stat_bin()` using `bins = 30`. Pick better value
+## with `binwidth`.
+```
+
+![plot of chunk unnamed-chunk-30](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-30-1.png)
+
+```r
+## 密度图
+#### 参数：x, y, alpha, color, fill, group, linetype, size, weight
+c + geom_density(kernel = "gaussian")
+```
+
+![plot of chunk unnamed-chunk-30](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-30-2.png)
+
+```r
+## 圆点图
+#### 参数：x, y, alpha, color, fill
+c + geom_dotplot()
+## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
+```
+
+![plot of chunk unnamed-chunk-30](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-30-3.png)
+
+```r
+## 频率多边形图
+#### 参数：x, y, alpha, color, group, linetype, size
+c + geom_freqpoly()
+## `stat_bin()` using `bins = 30`. Pick better value
+## with `binwidth`.
+```
+
+![plot of chunk unnamed-chunk-30](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-30-4.png)
+
+```r
+## 直方图
+#### 参数：x, y, alpha, color, fill, linetype, size, weight
+c + geom_histogram(binwidth = 5)
+```
+
+![plot of chunk unnamed-chunk-30](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-30-5.png)
+
+```r
+## qq图
+#### 参数：x, y, alpha, color, fill, linetype, size, weight
+c2 + geom_qq(aes(sample = hwy))
+```
+
+![plot of chunk unnamed-chunk-30](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-30-6.png)
+
+```r
+##### 非连续型变量
+d <- ggplot(mpg, aes(fl))
+## 柱状图
+#### 参数: x, alpha, color, fill, linetype, size, weight
+d + geom_bar()
+```
+
+![plot of chunk unnamed-chunk-30](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-30-7.png)
+
+#### 4.双变量
+* 连续型x,连续型y
+
+```r
+e <- ggplot(mpg,aes(cty,hwy))
+## 标记图
+####参数：x, y, label, alpha, angle, color, family, fontface, hjust, lineheight, size, vjust
+e + geom_label(aes(label = cty), nudge_x = 1, nudge_y = 1, check_overlap = TRUE)
+## Warning: Ignoring unknown parameters: check_overlap
+```
+
+![plot of chunk unnamed-chunk-31](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-31-1.png)
+
+```r
+## 抖动图
+####参数：x, y, alpha, color, fill, shape, size
+e + geom_jitter(height = 2, width = 2)
+```
+
+![plot of chunk unnamed-chunk-31](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-31-2.png)
+
+```r
+## 散点图
+####参数： x, y, alpha, color, fill, shape, size, stroke
+e + geom_point()
+```
+
+![plot of chunk unnamed-chunk-31](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-31-3.png)
+
+```r
+## 分位图
+####参数：x, y, alpha, color, group, linetype, size, weight
+e + geom_quantile()
+## Smoothing formula not specified. Using: y ~ x
+```
+
+![plot of chunk unnamed-chunk-31](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-31-4.png)
+
+```r
+## 轴须图
+####参数：x, y, alpha, color, linetype, size 
+e + geom_rug(sides = "bl")
+```
+
+![plot of chunk unnamed-chunk-31](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-31-5.png)
+
+```r
+## 平滑曲线图
+####参数：x, y, alpha, color, fill, group, linetype, size, weight
+e + geom_smooth(method = lm)
+## `geom_smooth()` using formula 'y ~ x'
+```
+
+![plot of chunk unnamed-chunk-31](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-31-6.png)
+
+```r
+## 文字标记图
+####参数：nudge_x = 1, nudge_y = 1, check_overlap = TRUE), x, y, label, alpha, angle, color, family, fontface, hjust, lineheight, size, vjust
+e + geom_text(aes(label = cty))
+```
+
+![plot of chunk unnamed-chunk-31](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-31-7.png)
+
+* 不连续型x,连续型y
+
+```r
+f <- ggplot(mpg, aes(class, hwy))
+## 因子变量的柱状图
+####参数：x, y, alpha, color, fill, group, linetype, size
+f + geom_col()
+```
+
+![plot of chunk unnamed-chunk-32](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-32-1.png)
+
+```r
+## 盒形图（箱型图）
+####参数：x, y, lower, middle, upper, ymax, ymin, alpha, color, fill, group, linetype, shape, size, weight
+f + geom_boxplot()
+```
+
+![plot of chunk unnamed-chunk-32](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-32-2.png)
+
+```r
+## 因子变量的圆点图
+####参数：x, y, alpha, color, fill, group 
+f + geom_dotplot(binaxis = "y", stackdir = "center")
+## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
+```
+
+![plot of chunk unnamed-chunk-32](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-32-3.png)
+
+```r
+## 小提琴图
+####参数：x, y, alpha, color, fill, group, linetype, size, weight
+f + geom_violin(scale = "area")
+```
+
+![plot of chunk unnamed-chunk-32](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-32-4.png)
+
+* 不连续型x,不连续型y
+
+```r
+g <- ggplot(diamonds, aes(cut, color))
+## 计数图
+####参数：x, y, alpha, color, fill, shape, size, stroke
+g + geom_count()
+```
+
+![plot of chunk unnamed-chunk-33](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-33-1.png)
+
+```r
+##### 连续型二维变量（区域密度图）
+h <- ggplot(diamonds, aes(carat, price))
+## 区间密度图（bin2d）
+####参数：x,y,alpha,color,fill,linetype,size,weight
+h + geom_bin2d(bingwidth = c(0.25,500))
+## Warning: Ignoring unknown parameters: bingwidth
+```
+
+![plot of chunk unnamed-chunk-33](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-33-2.png)
+
+```r
+## 密度曲线图
+####参数：x,y,alpha,color,group,linetype,size
+h + geom_density2d()
+```
+
+![plot of chunk unnamed-chunk-33](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-33-3.png)
+
+```r
+## 区间密度六边形图（hex）
+####参数：x,y,alpha,color,fill,size
+h + geom_hex()
+```
+
+![plot of chunk unnamed-chunk-33](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-33-4.png)
+
+* 功能连续型
+
+```r
+i <- ggplot(economics,aes(date,unemploy))
+## 面积
+####参数：x,y,alpha,color,fill,linetype,size
+i + geom_area()
+```
+
+![plot of chunk unnamed-chunk-34](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-34-1.png)
+
+```r
+## 线状图
+####参数：x,y,alpha,color,group,linetype,size
+i + geom_line()
+```
+
+![plot of chunk unnamed-chunk-34](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-34-2.png)
+
+```r
+## 阶梯图
+####参数：x,y,alpha,color,group,linetype,size
+i + geom_step(direction = "hv")
+```
+
+![plot of chunk unnamed-chunk-34](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-34-3.png)
+
+* 带误差值的图（error bar）
+
+```r
+df <- data.frame(grp = c("A","B","C"),fit = 4:6,se = 1:3)
+j <- ggplot(df,aes(grp,fit,ymin=fit-se,ymax=fit+se))
+## 带状图
+####参数：x, y, ymax, ymin, alpha, color, fill, group, linetype, size
+j + geom_crossbar(fatten = 2)
+```
+
+![plot of chunk unnamed-chunk-35](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-35-1.png)
+
+```r
+## 误差棒图 (errorbar || errorbarh)
+####参数：x, y, ymax, ymin, alpha, color, fill, group, linetype, size, width
+j + geom_errorbar()
+```
+
+![plot of chunk unnamed-chunk-35](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-35-2.png)
+
+```r
+## 线段区间图
+####参数：x, y, ymax, ymin, alpha, color, fill, group, linetype, size
+j + geom_linerange()
+```
+
+![plot of chunk unnamed-chunk-35](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-35-3.png)
+
+```r
+## 点线区间图
+####参数：x, y, ymax, ymin, alpha, color, fill, group, linetype, size, shape
+j + geom_pointrange()
+```
+
+![plot of chunk unnamed-chunk-35](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-35-4.png)
+
+* 地图（map）
+
+```r
+data <- data.frame(murder = USArrests$Murder,
+                   state = tolower(rownames(USArrests)))
+map <- map_data("state")
+k <- ggplot(data, aes(fill = murder))
+## 地图
+####参数：map_id, alpha, color, fill, linetype, size
+k + geom_map(aes(map_id = state), map = map) + expand_limits(x = map$long, y = map$lat)
+```
+
+![plot of chunk unnamed-chunk-36](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-36-1.png)
+
+#### 5.三变量
+
+```r
+seals$z <- with(seals,sqrt(delta_long^2+delta_lat^2))
+l <- ggplot(seals, aes(long, lat))
+## 等高线图（contour)
+####参数：x, y, z, alpha, colour, group, linetype, size, weight
+l + geom_contour(aes(z = z))
+```
+
+![plot of chunk unnamed-chunk-37](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-37-1.png)
+
+```r
+## 栅格图 (raster)
+####参数：x, y, alpha, fill
+l + geom_raster(aes(fill = z), hjust=0.5, vjust=0.5, interpolate=FALSE)
+```
+
+![plot of chunk unnamed-chunk-37](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-37-2.png)
+
+```r
+## 瓦片图 (tile)
+####参数：x, y, alpha, color, fill, linetype, size, width
+l + geom_tile(aes(fill = z))
+```
+
+![plot of chunk unnamed-chunk-37](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-37-3.png)
 ### 分组
 
 ### 刻面

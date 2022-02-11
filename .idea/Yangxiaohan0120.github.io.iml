@@ -6,5 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="LearnPython" />
     <orderEntry type="module" module-name="LearningR" />
+    <orderEntry type="module" module-name="Storage" />
+    <orderEntry type="module" module-name="Storage" />
   </component>
 </module>

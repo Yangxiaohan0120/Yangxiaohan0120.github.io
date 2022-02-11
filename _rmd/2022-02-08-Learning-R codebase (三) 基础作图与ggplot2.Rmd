@@ -399,8 +399,222 @@ curve((x^2+1)^0.5,0,5)
 
 ## 二、ggplot2作图
 
+### ggplot2的基本语法
+
+ggplot2(data = <DATA>) + 
+    < GEOM_FUNCTION >( mapping = aes(< MAPPINGS >),stat=< STAT >,position = < POSITION >)+
+    <COORDINATE_FUNCTION>+
+    <FACET_FUNCTION>+
+    <SCALE_FUNCTION>+
+    <THEME_FUNCTION>
+    
+```{r,eval=T,collapse=T}
+library(ggplot2)
+## 写法一
+ggplot(data = mpg,aes(x = cty,y = hwy)) + geom_point()
+## 写法二
+qplot(x = cty,y = hwy,data = mpg,geom = "point")
+## 保存
+ggsave("plot.png",width = 5,height = 5)
+last_plot() ## 显示最后一张图
+```
+
 ### 基本图类型
 
+#### 1.基础图块
+
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+a <- ggplot(economics,aes(date,unemploy))
+b <- ggplot(seals,aes(x=long,y=lat))
+head(economics)
+head(seals)
+## 空白
+a + geom_blank()
+## 曲线
+#### 参数：x,xend,y,yend,alpha,angle,color,curvature,linetype,size
+b + geom_curve(aes(yend = lat + 1, xend=long+1,curvature=z))
+b + geom_curve(aes(x =4.1,y = 7,yend =3.46,xend = 3.6),curvature=0.2)
+## 路径
+#### 参数：x,y,alpha,color,group,linetype,size
+a + geom_path(lineend="butt",linejoin = "round",linemitre = 1)
+## 多边形
+#### 参数：x,y,alpha,color,fill,group,linetype,size
+a + geom_polygon(aes(group = psavert))
+## 长方形
+#### 参数：xmax, xmin, ymax, ymin, alpha, color, fill, linetype, size
+b + geom_rect(aes(xmin = long, ymin=lat, xmax= long + 1, ymax = lat + 1)) 
+## 丝带
+#### 参数：x, ymax, ymin, alpha, color, fill, group, linetype, size
+a + geom_ribbon(aes(ymin=unemploy - 900, ymax=unemploy + 900))
+```
+
+#### 2.线条图
+
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+#### 参数：x, y, alpha, color, linetype, size
+## 任意线
+b + geom_abline(aes(intercept=0, slope=1))
+## 水平线
+b + geom_hline(aes(yintercept = lat))
+## 垂直线
+b + geom_vline(aes(xintercept = long))
+## 分割线
+b + geom_segment(aes(yend=lat+1, xend=long+1)) 
+## 条幅线
+a + geom_spoke(aes(x=1,y=1,angle = 1:574, radius = 0.2))
+```
+
+#### 3.单一变量
+
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+c <- ggplot(mpg,aes(hwy))
+c2 <- ggplot(mpg)
+##### 连续型变量
+## 面积图
+#### 参数：x, y, alpha, color, fill, linetype, size
+c + geom_area(stat = "bin")
+## 密度图
+#### 参数：x, y, alpha, color, fill, group, linetype, size, weight
+c + geom_density(kernel = "gaussian")
+## 圆点图
+#### 参数：x, y, alpha, color, fill
+c + geom_dotplot()
+## 频率多边形图
+#### 参数：x, y, alpha, color, group, linetype, size
+c + geom_freqpoly()
+## 直方图
+#### 参数：x, y, alpha, color, fill, linetype, size, weight
+c + geom_histogram(binwidth = 5)
+## qq图
+#### 参数：x, y, alpha, color, fill, linetype, size, weight
+c2 + geom_qq(aes(sample = hwy))
+##### 非连续型变量
+d <- ggplot(mpg, aes(fl))
+## 柱状图
+#### 参数: x, alpha, color, fill, linetype, size, weight
+d + geom_bar()
+```
+
+#### 4.双变量
+* 连续型x,连续型y
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+e <- ggplot(mpg,aes(cty,hwy))
+## 标记图
+####参数：x, y, label, alpha, angle, color, family, fontface, hjust, lineheight, size, vjust
+e + geom_label(aes(label = cty), nudge_x = 1, nudge_y = 1, check_overlap = TRUE)
+## 抖动图
+####参数：x, y, alpha, color, fill, shape, size
+e + geom_jitter(height = 2, width = 2)
+## 散点图
+####参数： x, y, alpha, color, fill, shape, size, stroke
+e + geom_point()
+## 分位图
+####参数：x, y, alpha, color, group, linetype, size, weight
+e + geom_quantile()
+## 轴须图
+####参数：x, y, alpha, color, linetype, size 
+e + geom_rug(sides = "bl")
+## 平滑曲线图
+####参数：x, y, alpha, color, fill, group, linetype, size, weight
+e + geom_smooth(method = lm)
+## 文字标记图
+####参数：nudge_x = 1, nudge_y = 1, check_overlap = TRUE), x, y, label, alpha, angle, color, family, fontface, hjust, lineheight, size, vjust
+e + geom_text(aes(label = cty))
+```
+
+* 不连续型x,连续型y
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+f <- ggplot(mpg, aes(class, hwy))
+## 因子变量的柱状图
+####参数：x, y, alpha, color, fill, group, linetype, size
+f + geom_col()
+## 盒形图（箱型图）
+####参数：x, y, lower, middle, upper, ymax, ymin, alpha, color, fill, group, linetype, shape, size, weight
+f + geom_boxplot()
+## 因子变量的圆点图
+####参数：x, y, alpha, color, fill, group 
+f + geom_dotplot(binaxis = "y", stackdir = "center")
+## 小提琴图
+####参数：x, y, alpha, color, fill, group, linetype, size, weight
+f + geom_violin(scale = "area")
+```
+
+* 不连续型x,不连续型y
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+g <- ggplot(diamonds, aes(cut, color))
+## 计数图
+####参数：x, y, alpha, color, fill, shape, size, stroke
+g + geom_count()
+##### 连续型二维变量（区域密度图）
+h <- ggplot(diamonds, aes(carat, price))
+## 区间密度图（bin2d）
+####参数：x,y,alpha,color,fill,linetype,size,weight
+h + geom_bin2d(bingwidth = c(0.25,500))
+## 密度曲线图
+####参数：x,y,alpha,color,group,linetype,size
+h + geom_density2d()
+## 区间密度六边形图（hex）
+####参数：x,y,alpha,color,fill,size
+h + geom_hex()
+```
+
+* 功能连续型
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+i <- ggplot(economics,aes(date,unemploy))
+## 面积
+####参数：x,y,alpha,color,fill,linetype,size
+i + geom_area()
+## 线状图
+####参数：x,y,alpha,color,group,linetype,size
+i + geom_line()
+## 阶梯图
+####参数：x,y,alpha,color,group,linetype,size
+i + geom_step(direction = "hv")
+```
+
+* 带误差值的图（error bar）
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+df <- data.frame(grp = c("A","B","C"),fit = 4:6,se = 1:3)
+j <- ggplot(df,aes(grp,fit,ymin=fit-se,ymax=fit+se))
+## 带状图
+####参数：x, y, ymax, ymin, alpha, color, fill, group, linetype, size
+j + geom_crossbar(fatten = 2)
+## 误差棒图 (errorbar || errorbarh)
+####参数：x, y, ymax, ymin, alpha, color, fill, group, linetype, size, width
+j + geom_errorbar()
+## 线段区间图
+####参数：x, y, ymax, ymin, alpha, color, fill, group, linetype, size
+j + geom_linerange()
+## 点线区间图
+####参数：x, y, ymax, ymin, alpha, color, fill, group, linetype, size, shape
+j + geom_pointrange()
+```
+
+* 地图（map）
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+data <- data.frame(murder = USArrests$Murder,
+                   state = tolower(rownames(USArrests)))
+map <- map_data("state")
+k <- ggplot(data, aes(fill = murder))
+## 地图
+####参数：map_id, alpha, color, fill, linetype, size
+k + geom_map(aes(map_id = state), map = map) + expand_limits(x = map$long, y = map$lat)
+```
+
+#### 5.三变量
+```{r,eval=T,collapse=T,fig.height=3,fig.width=3}
+seals$z <- with(seals,sqrt(delta_long^2+delta_lat^2))
+l <- ggplot(seals, aes(long, lat))
+## 等高线图（contour)
+####参数：x, y, z, alpha, colour, group, linetype, size, weight
+l + geom_contour(aes(z = z))
+## 栅格图 (raster)
+####参数：x, y, alpha, fill
+l + geom_raster(aes(fill = z), hjust=0.5, vjust=0.5, interpolate=FALSE)
+## 瓦片图 (tile)
+####参数：x, y, alpha, color, fill, linetype, size, width
+l + geom_tile(aes(fill = z))
+```
 ### 分组
 
 ### 刻面
