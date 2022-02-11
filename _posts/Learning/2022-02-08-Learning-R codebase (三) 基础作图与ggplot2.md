@@ -585,7 +585,7 @@ polygon(c(1.2,1.4,1.4,1.2),c(0,0,f(1.3),f(1.3)),col = "gray")
 
 ![plot of chunk unnamed-chunk-23](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-23-1.png)
 
-#### 12.平滑散点
+#### 13.平滑散点
 
 lowess() 与 loess() 函数
 
@@ -602,7 +602,7 @@ lines(lowess(datatest))
 ## integer(0)
 ```
 
-#### 13.绘制显式表达式的函数
+#### 14.绘制显式表达式的函数
 
 对于具有一定函数关系的曲线图的绘制
 
@@ -1095,6 +1095,7 @@ l + geom_tile(aes(fill = z))
 ![plot of chunk unnamed-chunk-37](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-37-3.png)
 
 ### 统计（stats）
+
 <GGPLOT> + <STATFUNCTION>(aes(<GEOMMAPPING> = <VARIABLE>),geom = <GEOM_FUNCTION>)
 i + stat_density2d(aes(fill = level),geom = "polygon")
 

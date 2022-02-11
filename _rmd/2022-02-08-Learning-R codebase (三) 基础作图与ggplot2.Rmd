@@ -368,7 +368,7 @@ curve(f,0,2)
 polygon(c(1.2,1.4,1.4,1.2),c(0,0,f(1.3),f(1.3)),col = "gray")
 ```
 
-#### 12.平滑散点
+#### 13.平滑散点
 
 lowess() 与 loess() 函数
 
@@ -378,7 +378,7 @@ plot(datatest)+
 lines(lowess(datatest))
 ```
 
-#### 13.绘制显式表达式的函数
+#### 14.绘制显式表达式的函数
 
 对于具有一定函数关系的曲线图的绘制
 
@@ -618,6 +618,7 @@ l + geom_tile(aes(fill = z))
 ```
 
 ### 统计（stats）
+
 <GGPLOT> + <STATFUNCTION>(aes(<GEOMMAPPING> = <VARIABLE>),geom = <GEOM_FUNCTION>)
 i + stat_density2d(aes(fill = level),geom = "polygon")
 
