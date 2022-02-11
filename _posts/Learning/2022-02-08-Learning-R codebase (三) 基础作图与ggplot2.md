@@ -1096,7 +1096,8 @@ l + geom_tile(aes(fill = z))
 
 ### 统计（stats）
 
-> <GGPLOT> + <STATFUNCTION>(aes(<GEOMMAPPING> = <VARIABLE>),geom = <GEOM_FUNCTION>)
+> GGPLOT + STATFUNCTION(aes(GEOMMAPPING = VARIABLE),geom = GEOM_FUNCTION)
+
 > i + stat_density2d(aes(fill = level),geom = "polygon")
 
 
