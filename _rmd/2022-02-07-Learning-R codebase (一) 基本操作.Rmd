@@ -222,6 +222,7 @@ patientData
 * attach() 添加到R的搜索路径中
 * detach() 从搜索路径中解除
 * with()
+
 ```{r,eval=T,collapse=T}
 attach(mtcars)
   summary(mpg)

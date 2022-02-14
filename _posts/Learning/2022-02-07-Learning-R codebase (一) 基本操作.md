@@ -8,14 +8,15 @@ header-img: "img/Rscripts.jpg"
 category: Learning
 catalog: true
 tags:
-    - base r
+    - R codebase
 ---
 
 > 段首语
 
 此系列文章用来做R语言的学习，以及对于使用R语言进行数据处理和作图的代码汇总，方便大家随时进行查找、使用。
 
-下一篇：[R codebase (二) 数据转换](https://yangxiaohan0120.github.io/learning/2022/02/08/Learning-R-codebase-(%E4%BA%8C)-%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/)
+下一篇：[R codebase (二) 数据转换](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(二)-数据转换)
+
 
 ## 一、help
 
@@ -165,11 +166,13 @@ sd(x) ## 标准差
 cumsum(x) ## 按项递加求和
 ##  [1]  1  4  6 10 15 20 26 34 43 53
 log(x) ## log 以e为底
-##  [1] 0.0000000 1.0986123 0.6931472 1.3862944 1.6094379 1.6094379 1.7917595
-##  [8] 2.0794415 2.1972246 2.3025851
+##  [1] 0.0000000 1.0986123 0.6931472 1.3862944 1.6094379
+##  [6] 1.6094379 1.7917595 2.0794415 2.1972246 2.3025851
 exp(x) ## 指数 以e为底
-##  [1]     2.718282    20.085537     7.389056    54.598150   148.413159   148.413159
-##  [7]   403.428793  2980.957987  8103.083928 22026.465795
+##  [1]     2.718282    20.085537     7.389056
+##  [4]    54.598150   148.413159   148.413159
+##  [7]   403.428793  2980.957987  8103.083928
+## [10] 22026.465795
 max(x)
 ## [1] 10
 min(x)
@@ -258,11 +261,11 @@ apply(z,1,mean)
 ## [1] 2.5 3.5 4.5
 f<- function(x) {x/c(2,8)}
 apply(z,2,f)
-## Warning in x/c(2, 8): longer object length is not a multiple of shorter object
-## length
+## Warning in x/c(2, 8): longer object length is not a
+## multiple of shorter object length
 
-## Warning in x/c(2, 8): longer object length is not a multiple of shorter object
-## length
+## Warning in x/c(2, 8): longer object length is not a
+## multiple of shorter object length
 ##      [,1]  [,2]
 ## [1,] 0.50 2.000
 ## [2,] 0.25 0.625
@@ -343,19 +346,22 @@ patientData
 
 ```r
 attach(mtcars)
+## The following object is masked from package:ggplot2:
+## 
+##     mpg
   summary(mpg)
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##   10.40   15.43   19.20   20.09   22.80   33.90
   plot(mpg,disp)
 ```
 
-![plot of chunk unnamed-chunk-17](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-17-1.png)
+![1](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/1/1.png)
 
 ```r
   plot(mpg,wt)
 ```
 
-![plot of chunk unnamed-chunk-17](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-17-2.png)
+![2](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/1/2.png)
 
 ```r
 detach(mtcars)
@@ -509,7 +515,7 @@ lines(x,dbeta(x,5,1),col='black')
 legend('top',legend=c('α=0.5,β=0.5','α=1,β=2','α=2,β=2','α=2,β=5','α=1,β=3','α=5,β=1'),col=c('red','green','pink','orange','blue','black'),lwd=1)
 ```
 
-![plot of chunk unnamed-chunk-22](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-22-1.png)
+![3](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/1/3.png)
 
 * dnorm() 密度分布
 * pnorm() 分布函数
@@ -522,25 +528,25 @@ x <- pretty(c(-3,3),100) ## 生成符合标准正态分布的随机数
 plot(x,dnorm(x,mean = 0,sd = 1))
 ```
 
-![plot of chunk unnamed-chunk-23](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-23-1.png)
+![4](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/1/4.png)
 
 ```r
 plot(x,pnorm(x,mean = 0,sd = 1))
 ```
 
-![plot of chunk unnamed-chunk-23](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-23-2.png)
+![5](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/1/5.png)
 
 ```r
 plot(x,qnorm(x,mean = 0,sd = 1))
 ```
 
-![plot of chunk unnamed-chunk-23](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-23-3.png)
+![6](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/1/6.png)
 
 ```r
 plot(x,rnorm(x,mean = 0,sd = 1))
 ```
 
-![plot of chunk unnamed-chunk-23](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-23-4.png)
+![7](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/1/7.png)
 
 ### 3.控制流
 
@@ -624,6 +630,7 @@ dcast(aqm, month ~ variable, mean, margins = c("month", "variable"))
 ```
 
 > 持续更新 。。。
+
 
 
 

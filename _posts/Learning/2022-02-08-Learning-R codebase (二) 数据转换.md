@@ -9,19 +9,16 @@ category: Learning
 catalog: true
 tags:
     - R codebase
-    - tidyr
-    - dplyr
-    - data.table
-    - purrr
 ---
 
 > 段首语
 
 此系列文章用来做R语言的学习，以及对于使用R语言进行数据处理和作图的代码汇总，方便大家随时进行查找、使用。
 
-上一篇：[R codebase (一) 基本操作](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(%E4%B8%80)-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/)
+上一篇：[R codebase (一) 基本操作](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(一)-基本操作)
 
-下一篇：[R codebase (三) 基础作图与ggplot2](https://yangxiaohan0120.github.io/learning/2022/02/09/Learning-R-codebase-(%E4%B8%89)-%E5%9F%BA%E7%A1%80%E4%BD%9C%E5%9B%BE%E4%B8%8Eggplot2/)
+下一篇：[R codebase (三) 基础作图与ggplot2](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(三)-基础作图与ggplot2)
+
 
 ## 一、数据的导入与输出
 
@@ -40,7 +37,7 @@ read_*(file, col_names = TRUE, col_types = NULL, locale = default_locale(), na =
 
 分号分隔：read_csv2("file2.csv")
 
-任意分隔符：read_delim("file.txt", delim = "\|")
+任意分隔符：read_delim("file.txt", delim = "|")
 
 任意宽度的空格分隔：read_fwf("file.fwf", col_positions = c(1, 3, 5))
 
@@ -193,44 +190,36 @@ replace_na(x, list(x2 = 2))
 
 ```r
 head(mtcars)
-##                    mpg cyl disp  hp
-## Mazda RX4         21.0   6  160 110
-## Mazda RX4 Wag     21.0   6  160 110
-## Datsun 710        22.8   4  108  93
-## Hornet 4 Drive    21.4   6  258 110
-## Hornet Sportabout 18.7   8  360 175
-## Valiant           18.1   6  225 105
-##                   drat    wt  qsec vs
-## Mazda RX4         3.90 2.620 16.46  0
-## Mazda RX4 Wag     3.90 2.875 17.02  0
-## Datsun 710        3.85 2.320 18.61  1
-## Hornet 4 Drive    3.08 3.215 19.44  1
-## Hornet Sportabout 3.15 3.440 17.02  0
-## Valiant           2.76 3.460 20.22  1
-##                   am gear carb
-## Mazda RX4          1    4    4
-## Mazda RX4 Wag      1    4    4
-## Datsun 710         1    4    1
-## Hornet 4 Drive     0    3    1
-## Hornet Sportabout  0    3    2
-## Valiant            0    3    1
+##                    mpg cyl disp  hp drat    wt  qsec
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02
+## Valiant           18.1   6  225 105 2.76 3.460 20.22
+##                   vs am gear carb
+## Mazda RX4          0  1    4    4
+## Mazda RX4 Wag      0  1    4    4
+## Datsun 710         1  1    4    1
+## Hornet 4 Drive     1  0    3    1
+## Hornet Sportabout  0  0    3    2
+## Valiant            1  0    3    1
 ## complete(data, ..., fill = list())
 complete(mtcars, cyl, gear, carb)
 ## # A tibble: 74 × 11
-##      cyl  gear  carb   mpg  disp    hp
-##    <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-##  1     4     3     1  21.5 120.     97
-##  2     4     3     2  NA    NA      NA
-##  3     4     3     3  NA    NA      NA
-##  4     4     3     4  NA    NA      NA
-##  5     4     3     6  NA    NA      NA
-##  6     4     3     8  NA    NA      NA
-##  7     4     4     1  22.8 108      93
-##  8     4     4     1  32.4  78.7    66
-##  9     4     4     1  33.9  71.1    65
-## 10     4     4     1  27.3  79      66
-## # … with 64 more rows, and 5 more
-## #   variables: drat <dbl>, wt <dbl>,
+##      cyl  gear  carb   mpg  disp    hp  drat    wt
+##    <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+##  1     4     3     1  21.5 120.     97  3.7   2.46
+##  2     4     3     2  NA    NA      NA NA    NA   
+##  3     4     3     3  NA    NA      NA NA    NA   
+##  4     4     3     4  NA    NA      NA NA    NA   
+##  5     4     3     6  NA    NA      NA NA    NA   
+##  6     4     3     8  NA    NA      NA NA    NA   
+##  7     4     4     1  22.8 108      93  3.85  2.32
+##  8     4     4     1  32.4  78.7    66  4.08  2.2 
+##  9     4     4     1  33.9  71.1    65  4.22  1.84
+## 10     4     4     1  27.3  79      66  4.08  1.94
+## # … with 64 more rows, and 3 more variables:
 ## #   qsec <dbl>, vs <dbl>, am <dbl>
 ## expand(data, ...)
 expand(mtcars, cyl, gear, carb)
@@ -311,43 +300,21 @@ unite(datax, country, year, col = "c_y", sep = "")
 ## 6 CY2000  213K/1T
 ```
 
+
+
 ## 三、数据的形式转换（dplyr）
-
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/1.png)
-
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/dplyr/data-transformation_page-0001.jpg)
-
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/dplyr/data-transformation_page-0002.jpg)
 
 ## 四、数据的形式转换（data.table）
 
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/datatable/datatable_page-0001.jpg)
-
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/datatable/datatable_page-0002.jpg)
-
 ## 五、数据的形式转换（sjmisc）
-
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/sjmisc/sjmisc_page-0001.jpg)
 
 ## 六、apply的使用（purr）
 
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/purrr/purrr_page-0001.jpg)
-
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/purrr/purrr_page-0002.jpg)
-
 ## 七、String类的修改
 
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/String/strings_page-0001.jpg)
-
-![](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/String/strings_page-0002.jpg)
-
-## 参考链接
-
-<https://github.com/rstudio/cheatsheets/tree/54f418c245ba22ee2f65ff2b760c77650c08888e>
-
-cheatsheet 引自 Favio André Vázquez 
-
 > 持续更新 。。。
+
+
 
 
 
