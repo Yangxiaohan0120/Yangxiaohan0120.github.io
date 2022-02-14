@@ -328,9 +328,7 @@ unite(datax, country, year, col = "c_y", sep = "")
 
 ![](/Users/yxh/PycharmProjects/Yangxiaohan0120.github.io/figure/String/strings_page-0002.jpg)
 
-cheatsheet 引用自 
-
-![Favio Vázquez](https://github.com/FavioVazquez/ds-cheatsheets)
+cheatsheet 引用自 https://github.com/FavioVazquez/ds-cheatsheets
 
 > 持续更新 。。。
 
