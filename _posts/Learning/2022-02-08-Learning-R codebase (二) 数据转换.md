@@ -17,7 +17,7 @@ tags:
 
 上一篇：[R codebase (一) 基本操作](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(%E4%B8%80)-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/)
 
-下一篇：[R codebase (三) 基础作图与ggplot2](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(三)-基础作图与ggplot2)
+下一篇：[R codebase (三) 基础作图与ggplot2](https://yangxiaohan0120.github.io/learning/2022/02/09/Learning-R-codebase-(%E4%B8%89)-%E5%9F%BA%E7%A1%80%E4%BD%9C%E5%9B%BE%E4%B8%8Eggplot2/)
 
 
 ## 一、数据的导入与输出
