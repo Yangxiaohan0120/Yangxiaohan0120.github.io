@@ -15,9 +15,9 @@ tags:
 
 此系列文章用来做R语言的学习，以及对于使用R语言进行数据处理和作图的代码汇总，方便大家随时进行查找、使用。
 
-上一篇：[R codebase (二) 数据转换](https://yangxiaohan0120.github.io/learning/2022/02/08/Learning-R-codebase-(%E4%BA%8C)-%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/)
+上一篇：[R codebase (二) 数据转换](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(二)-数据转换)
 
-下一篇：[R codebase (四) 基本数据分析](https://yangxiaohan0120.github.io/learning/2022/02/10/Learning-R-codebase-(%E5%9B%9B)-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/)
+下一篇：[R codebase (四) 基本数据分析](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(四)-基本数据分析)
 
 
 ## 一、base R 基础作图
@@ -138,20 +138,13 @@ mosaicplot(HairEyeColor)
 
 ```r
 head(mtcars)
-##                    mpg cyl disp  hp drat    wt  qsec
-## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46
-## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02
-## Datsun 710        22.8   4  108  93 3.85 2.320 18.61
-## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44
-## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02
-## Valiant           18.1   6  225 105 2.76 3.460 20.22
-##                   vs am gear carb
-## Mazda RX4          0  1    4    4
-## Mazda RX4 Wag      0  1    4    4
-## Datsun 710         1  1    4    1
-## Hornet 4 Drive     1  0    3    1
-## Hornet Sportabout  0  0    3    2
-## Valiant            1  0    3    1
+##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 heatmap(as.matrix(mtcars))
 ```
 
@@ -180,12 +173,10 @@ library(lattice)
 attach(iris)# 3d scatterplot by factor level
 ## The following objects are masked from iris (pos = 4):
 ## 
-##     Petal.Length, Petal.Width, Sepal.Length,
-##     Sepal.Width, Species
+##     Petal.Length, Petal.Width, Sepal.Length, Sepal.Width, Species
 ## The following objects are masked from iris (pos = 6):
 ## 
-##     Petal.Length, Petal.Width, Sepal.Length,
-##     Sepal.Width, Species
+##     Petal.Length, Petal.Width, Sepal.Length, Sepal.Width, Species
   cloud(Sepal.Length~Sepal.Width*Petal.Length|Species, main="3D Scatterplot by Species")
 ```
 
@@ -200,16 +191,11 @@ attach(iris)# 3d scatterplot by factor level
 
 ```r
 cor(iris[1:4])
-##              Sepal.Length Sepal.Width Petal.Length
-## Sepal.Length    1.0000000  -0.1175698    0.8717538
-## Sepal.Width    -0.1175698   1.0000000   -0.4284401
-## Petal.Length    0.8717538  -0.4284401    1.0000000
-## Petal.Width     0.8179411  -0.3661259    0.9628654
-##              Petal.Width
-## Sepal.Length   0.8179411
-## Sepal.Width   -0.3661259
-## Petal.Length   0.9628654
-## Petal.Width    1.0000000
+##              Sepal.Length Sepal.Width Petal.Length Petal.Width
+## Sepal.Length    1.0000000  -0.1175698    0.8717538   0.8179411
+## Sepal.Width    -0.1175698   1.0000000   -0.4284401  -0.3661259
+## Petal.Length    0.8717538  -0.4284401    1.0000000   0.9628654
+## Petal.Width     0.8179411  -0.3661259    0.9628654   1.0000000
 library(corrgram)
 corrgram(iris)
 ```
@@ -284,33 +270,28 @@ col=1,col="white",col=#FFFFFF".col=rgb(1,1,1)和col=hsv(0,0,1)
 ```r
 ## colors() 可返回所有可用的颜色名称
 head(colors())
-## [1] "white"         "aliceblue"     "antiquewhite" 
-## [4] "antiquewhite1" "antiquewhite2" "antiquewhite3"
+## [1] "white"         "aliceblue"     "antiquewhite"  "antiquewhite1"
+## [5] "antiquewhite2" "antiquewhite3"
 
 rainbow(10)
-##  [1] "#FF0000" "#FF9900" "#CCFF00" "#33FF00"
-##  [5] "#00FF66" "#00FFFF" "#0066FF" "#3300FF"
-##  [9] "#CC00FF" "#FF0099"
+##  [1] "#FF0000" "#FF9900" "#CCFF00" "#33FF00" "#00FF66" "#00FFFF" "#0066FF"
+##  [8] "#3300FF" "#CC00FF" "#FF0099"
 
 heat.colors(10)
-##  [1] "#FF0000" "#FF2400" "#FF4900" "#FF6D00"
-##  [5] "#FF9200" "#FFB600" "#FFDB00" "#FFFF00"
-##  [9] "#FFFF40" "#FFFFBF"
+##  [1] "#FF0000" "#FF2400" "#FF4900" "#FF6D00" "#FF9200" "#FFB600" "#FFDB00"
+##  [8] "#FFFF00" "#FFFF40" "#FFFFBF"
 
 terrain.colors(10)
-##  [1] "#00A600" "#2DB600" "#63C600" "#A0D600"
-##  [5] "#E6E600" "#E8C32E" "#EBB25E" "#EDB48E"
-##  [9] "#F0C9C0" "#F2F2F2"
+##  [1] "#00A600" "#2DB600" "#63C600" "#A0D600" "#E6E600" "#E8C32E" "#EBB25E"
+##  [8] "#EDB48E" "#F0C9C0" "#F2F2F2"
 
 topo.colors(10)
-##  [1] "#4C00FF" "#0019FF" "#0080FF" "#00E5FF"
-##  [5] "#00FF4D" "#4DFF00" "#E6FF00" "#FFFF00"
-##  [9] "#FFDE59" "#FFE0B3"
+##  [1] "#4C00FF" "#0019FF" "#0080FF" "#00E5FF" "#00FF4D" "#4DFF00" "#E6FF00"
+##  [8] "#FFFF00" "#FFDE59" "#FFE0B3"
 
 cm.colors(10)
-##  [1] "#80FFFF" "#99FFFF" "#B3FFFF" "#CCFFFF"
-##  [5] "#E6FFFF" "#FFE6FF" "#FFCCFF" "#FFB3FF"
-##  [9] "#FF99FF" "#FF80FF"
+##  [1] "#80FFFF" "#99FFFF" "#B3FFFF" "#CCFFFF" "#E6FFFF" "#FFE6FF" "#FFCCFF"
+##  [8] "#FFB3FF" "#FF99FF" "#FF80FF"
 ```
 
 * R 包
@@ -793,8 +774,7 @@ c2 <- ggplot(mpg)
 ## 面积图
 #### 参数：x, y, alpha, color, fill, linetype, size
 c + geom_area(stat = "bin")
-## `stat_bin()` using `bins = 30`. Pick better value
-## with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
 ![plot of chunk unnamed-chunk-30](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-30-1.png)
@@ -820,8 +800,7 @@ c + geom_dotplot()
 ## 频率多边形图
 #### 参数：x, y, alpha, color, group, linetype, size
 c + geom_freqpoly()
-## `stat_bin()` using `bins = 30`. Pick better value
-## with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
 ![plot of chunk unnamed-chunk-30](https://raw.githubusercontent.com/Yangxiaohan0120/Yangxiaohan0120.github.io/main/figure/unnamed-chunk-30-4.png)
@@ -1096,8 +1075,7 @@ l + geom_tile(aes(fill = z))
 
 ### 统计（stats）
 
-> GGPLOT + STATFUNCTION(aes(GEOMMAPPING = VARIABLE),geom = GEOM_FUNCTION)
-
+> <GGPLOT> + <STATFUNCTION>(aes(<GEOMMAPPING> = <VARIABLE>),geom = <GEOM_FUNCTION>)
 > i + stat_density2d(aes(fill = level),geom = "polygon")
 
 
@@ -1309,7 +1287,9 @@ e + stat_unique()
 
 * 组成结构
 
-> scale_aesthetic to adjust_prepackaged scale to use(values,limits,breaks,name,labels)
+<scale>_<aesthetic to adjust>_<prepackaged scale to use>(
+    values,limits,breaks,name,labels
+)
 
 
 ```r
