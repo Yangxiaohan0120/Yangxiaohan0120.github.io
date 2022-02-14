@@ -15,7 +15,7 @@ tags:
 
 此系列文章用来做R语言的学习，以及对于使用R语言进行数据处理和作图的代码汇总，方便大家随时进行查找、使用。
 
-上一篇：[R codebase (一) 基本操作](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(一)-基本操作)
+上一篇：[R codebase (一) 基本操作](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(%E4%B8%80)-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/)
 
 下一篇：[R codebase (三) 基础作图与ggplot2](https://yangxiaohan0120.github.io/learning/2022/02/07/Learning-R-codebase-(三)-基础作图与ggplot2)
 
