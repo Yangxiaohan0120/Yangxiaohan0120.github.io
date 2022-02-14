@@ -5,166 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_rmd/2022-02-07-Learning-R-codebase--一--基本操作.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/1/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/1/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/1/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/1/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/1/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/1/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/figure/1/7.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Learning/2022-02-07-Learning-R codebase (一) 基本操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/Learning/2022-02-07-Learning-R codebase (一) 基本操作.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/Learning/2022-02-08-Learning-R codebase (二) 数据转换.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/Learning/2022-02-08-Learning-R codebase (二) 数据转换.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rmd/2022-02-07-Learning-R codebase (一) 基本操作.Rmd" beforeDir="false" afterPath="$PROJECT_DIR$/_rmd/2022-02-07-Learning-R codebase (一) 基本操作.Rmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-11-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-11-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-12-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-13-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-15-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-17-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-17-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-18-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-19-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-2-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-20-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-21-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-22-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-23-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-23-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-23-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-23-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-24-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-25-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-26-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-27-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-27-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-27-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-28-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-28-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-28-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-28-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-28-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-28-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-28-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-29-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-29-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-29-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-29-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-29-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-3-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-30-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-30-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-30-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-30-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-30-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-30-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-30-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-31-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-31-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-31-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-31-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-31-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-31-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-31-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-32-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-32-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-32-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-32-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-33-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-33-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-33-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-33-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-34-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-34-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-34-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-35-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-35-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-35-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-35-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-36-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-37-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-37-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-37-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-39-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-4-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-4-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-40-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-41-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-42-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-43-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-44-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-45-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-46-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-47-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-48-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-49-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-5-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-5-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-50-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-51-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-52-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-53-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-54-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-55-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-56-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-57-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-58-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-59-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-6-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-6-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-6-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-60-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-61-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-62-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-62-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-62-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-62-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-62-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-62-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-63-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-63-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-63-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-63-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-64-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-64-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-64-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-64-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-64-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-65-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-65-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-65-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-65-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-65-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-65-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-66-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-66-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-66-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-66-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-67-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-68-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-68-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-69-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-69-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-69-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-69-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-69-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-69-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-69-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-69-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-7-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-7-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-70-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-70-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-71-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-71-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-71-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-72-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-72-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-72-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-73-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-8-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figure/unnamed-chunk-9-1.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,14 +101,7 @@
       <workItem from="1644469427993" duration="135000" />
       <workItem from="1644469571502" duration="894000" />
       <workItem from="1644544217141" duration="4608000" />
-      <workItem from="1644838560874" duration="1454000" />
-    </task>
-    <task id="LOCAL-00011" summary="update">
-      <created>1644210584567</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1644210584567</updated>
+      <workItem from="1644838560874" duration="1680000" />
     </task>
     <task id="LOCAL-00012" summary="update">
       <created>1644211386816</created>
@@ -604,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644574109700</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="update">
+      <created>1644844507700</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1644844507701</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
