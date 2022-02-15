@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/Learning/2022-02-08-Learning-R codebase (三) 基础作图与ggplot2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/Learning/2022-02-08-Learning-R codebase (三) 基础作图与ggplot2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (三) 基础作图与ggplot2.Rmd" beforeDir="false" afterPath="$PROJECT_DIR$/_rmd/2022-02-08-Learning-R codebase (三) 基础作图与ggplot2.Rmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/Learning/2022-02-15-Learning-贪心算法的证明.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_rmd/.Rhistory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tanxin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/in-post/code002.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +104,9 @@
       <workItem from="1644469427993" duration="135000" />
       <workItem from="1644469571502" duration="894000" />
       <workItem from="1644544217141" duration="4608000" />
-      <workItem from="1644838560874" duration="3733000" />
-    </task>
-    <task id="LOCAL-00021" summary="update">
-      <created>1644241865740</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1644241865740</updated>
+      <workItem from="1644838560874" duration="3958000" />
+      <workItem from="1644848116279" duration="565000" />
+      <workItem from="1644908313823" duration="1147000" />
     </task>
     <task id="LOCAL-00022" summary="update">
       <created>1644242000020</created>
@@ -446,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644846505093</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="update">
+      <created>1644846785154</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1644846785154</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
