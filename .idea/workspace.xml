@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_posts/Learning/2022-02-15-Learning-贪心算法的证明.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_rmd/.Rhistory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/tanxin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/in-post/code002.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +76,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -106,14 +103,13 @@
       <workItem from="1644544217141" duration="4608000" />
       <workItem from="1644838560874" duration="3958000" />
       <workItem from="1644848116279" duration="565000" />
-      <workItem from="1644908313823" duration="1147000" />
-    </task>
-    <task id="LOCAL-00022" summary="update">
-      <created>1644242000020</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1644242000020</updated>
+      <workItem from="1644908313823" duration="1359000" />
+      <workItem from="1644973434961" duration="503000" />
+      <workItem from="1645066487015" duration="2000" />
+      <workItem from="1645239553705" duration="195000" />
+      <workItem from="1645421301804" duration="3000" />
+      <workItem from="1645431854706" duration="562000" />
+      <workItem from="1645582892300" duration="4000" />
     </task>
     <task id="LOCAL-00023" summary="update">
       <created>1644242190748</created>
@@ -451,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644846785154</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="update">
+      <created>1644910026313</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1644910026313</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,6 +462,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../MyDrive" />
+    </ignored-roots>
     <MESSAGE value="second" />
     <MESSAGE value="third" />
     <MESSAGE value="update" />
