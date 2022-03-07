@@ -1,7 +1,9 @@
 ---
-layout:     post title:      "Java入门小项目--零钱通"
+layout:     post 
+title:      "Java入门小项目--零钱通"
 subtitle:   "Practice"
-date:       2022-03-07 16：47 author:     "Xiaohan"
+date:       2022-03-07 16：47 
+author:     "Xiaohan"
 header-img: "img/code001.jpg"
 category: Learning catalog: true tags:
 - Java实战项目
