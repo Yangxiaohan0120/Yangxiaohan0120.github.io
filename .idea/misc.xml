@@ -3,6 +3,13 @@
   <component name="RMarkdownSettings">
     <option name="renderProfiles">
       <map>
+        <entry key="file://$PROJECT_DIR$/../LearningR/RForDataScience/Utils.Rmd">
+          <value>
+            <RMarkdownRenderProfile>
+              <option name="outputDirectoryUrl" value="file://$PROJECT_DIR$/../LearningR/RForDataScience" />
+            </RMarkdownRenderProfile>
+          </value>
+        </entry>
         <entry key="file://$PROJECT_DIR$/_posts/Learning/2021-12-28-Learning-BinarySearch的变种.md">
           <value>
             <RMarkdownRenderProfile>
