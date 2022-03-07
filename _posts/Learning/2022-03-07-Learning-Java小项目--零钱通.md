@@ -5,8 +5,10 @@ subtitle:   "Practice"
 date:       2022-03-07 16：47 
 author:     "Xiaohan"
 header-img: "img/code001.jpg"
-category: Learning catalog: true tags:
-- Java实战项目
+category: Learning 
+catalog: true 
+tags:
+    - Java实战项目
 ---
 
 > 总要有个开始
