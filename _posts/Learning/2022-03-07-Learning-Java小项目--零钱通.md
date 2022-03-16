@@ -182,3 +182,54 @@ y
 ```
 
 完整代码可在 [SmallChangePacket](https://github.com/Yangxiaohan0120/LearningJava/tree/main/src/main/java/Project/SmallChangePacket) 查看
+
+
+----
+更新
+
+退出程序的更新：
+```java
+    public static boolean quit(Scanner scanner) {
+        String answer = null;
+        do {
+            System.out.println("你确定要退出吗？y/n");
+             answer = scanner.next();
+        }
+        while (!answer.equals("y") && !answer.equals("n"));
+
+        if (answer.equals("y")) {
+            System.out.println("退出了零钱通系统！");
+            scanner.close();
+            return false;
+        } else {
+            return true;
+        }
+    }
+```
+
+对应主程序中的修改
+
+```
+ do {
+     System.out.println(MainMenu);
+     int key = Integer.parseInt(scanner.next());
+     getOptions(key);
+ } while (loop);
+ 
+ loop = Functions.quit(scanner);
+```
+
+解释：
+
+之前将loop放在循环之外，没有考虑确认退出的结果，导致无论输入y还是n还是其他的字符都会结束程序。
+
+这里首先改正quit方法，添加了返回值为boolean，使得loop可以获取到用户输入的y/n信息来进行更改。
+
+其次添加了判断输入结果不是y/n的情况：首先做do while循环，并用answer获取到结果，直到获取到y/n值，再进行下一步。
+
+最后对answer值进行判断，y返回false终止循环并且退出程序。n返回true进行下一次循环可以继续进行排序。
+
+本次修改听取到了 [yangmin2723565901](https://github.com/yangmin2723565901) 的建议，也在这里感谢他！
+
+相关issue可以在这里查看 [issue](https://github.com/Yangxiaohan0120/LearningJava/issues/1)
+
