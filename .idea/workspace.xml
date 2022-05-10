@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d32d0cf9-aeee-4dc9-8eba-0a45e540ff02" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../LearnPython/001Basic/chp01问答环节/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Yangxiaohan0120.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Yangxiaohan0120.github.io.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/Learning/2022-03-07-Learning-Java小项目--零钱通.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/Learning/2022-03-07-Learning-Java小项目--零钱通.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../LearnPython" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -126,21 +128,12 @@
       <workItem from="1646642758990" duration="1054000" />
       <workItem from="1646644179375" duration="568000" />
       <workItem from="1647345297622" duration="3198000" />
-      <workItem from="1647431964874" duration="341000" />
-    </task>
-    <task id="LOCAL-00031" summary="second">
-      <created>1644299100103</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1644299100103</updated>
-    </task>
-    <task id="LOCAL-00032" summary="second">
-      <created>1644299321506</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1644299321506</updated>
+      <workItem from="1647431964874" duration="1227000" />
+      <workItem from="1647493344007" duration="1036000" />
+      <workItem from="1647499011526" duration="1851000" />
+      <workItem from="1649226475989" duration="48000" />
+      <workItem from="1649645892039" duration="34000" />
+      <workItem from="1651061203112" duration="1028000" />
     </task>
     <task id="LOCAL-00033" summary="second">
       <created>1644299388144</created>
@@ -471,7 +464,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647347888563</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="update">
+      <created>1647432572061</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1647432572061</updated>
+    </task>
+    <task id="LOCAL-00081" summary="add statcounter to track websites">
+      <created>1647499474098</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1647499474098</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,10 +488,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/../MyDrive" />
+      <path value="$PROJECT_DIR$/../home" />
     </ignored-roots>
     <MESSAGE value="second" />
     <MESSAGE value="third" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="add statcounter to track websites" />
+    <option name="LAST_COMMIT_MESSAGE" value="add statcounter to track websites" />
   </component>
 </project>

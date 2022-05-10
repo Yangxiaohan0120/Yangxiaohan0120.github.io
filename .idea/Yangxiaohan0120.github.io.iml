@@ -7,5 +7,7 @@
     <orderEntry type="module" module-name="LearnPython" />
     <orderEntry type="module" module-name="LearningR" />
     <orderEntry type="module" module-name="MyDrive" />
+    <orderEntry type="module" module-name="tensorqtl" />
+    <orderEntry type="module" module-name="home" />
   </component>
 </module>
