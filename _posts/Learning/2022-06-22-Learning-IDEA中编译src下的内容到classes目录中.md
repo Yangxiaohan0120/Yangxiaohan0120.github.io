@@ -34,21 +34,26 @@ dataFile = XmlDataSource.class.getResource("/painting.xml").getPath();
 
 但是IDEA只能将src目录下的.java文件编译到classes目录下，因此我们需要再pom.xml文件中进行设置
 
-```Java
+将需要被编译到classes文件夹的文件放置在（src/main/resourses 目录之下）（maven一般会直接创建，没有就自己创建，并在project structure中设置为resources目录
+
+```XML
     <build>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
-                <includes><include>**/*.ftl</include></includes>
-                <filtering>true</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes><include>**/*.xml</include></includes>
+                <includes>
+                    <include>**/*.ftl</include>
+                    <include>**/*.xml</include>
+                </includes>
                 <filtering>true</filtering>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.ftl</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
             </resource>
         </resources>
     </build>
